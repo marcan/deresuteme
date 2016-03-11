@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+    <link rel="icon" type="image/png" href="/static/favicon.png" sizes="16x16 32x32" />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.min.css">
+    {% if snapshot %}
+    <title>{{ data.name }}【{{ data.timestamp_fmt }}】- deresute.me</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@marcan42x">
+    <meta name="twitter:title" content="{{ data.name }}【{{ data.timestamp_fmt }}】- deresute.me">
+    <meta name="twitter:description" content="{{ data.comment }}">
+    <meta name="twitter:image" content="https://deresute.me/snap/{{ snapshot }}/twcard">
+    <meta name="twitter:image:width" content="811">
+    <meta name="twitter:image:height" content="434">
+
+    <meta property="og:title" content="{{ data.name }}【{{ data.timestamp_fmt }}】- deresute.me">
+    <meta property="og:image" content="https://deresute.me/snap/{{ snapshot }}/square">
+    <meta property="og:url" content="https://deresute.me/snap/{{ snapshot }}">
+    <meta name="Description" CONTENT="{{ data.comment }}">
+    {% elif data %}
+    <title>{{ data.name }} - deresute.me</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@marcan42x">
+    <meta name="twitter:title" content="{{ data.name }} - deresute.me">
+    <meta name="twitter:description" content="{{ data.comment }}">
+    <meta name="twitter:image" content="https://deresute.me/{{ data.id }}/twcard">
+    <meta name="twitter:image:width" content="811">
+    <meta name="twitter:image:height" content="434">
+    
+    <meta property="og:title" content="{{ data.name }} - deresute.me">
+    <meta property="og:image" content="https://deresute.me/{{ data.id }}/square">
+    <meta property="og:url" content="https://deresute.me/{{ data.id }}">
+    <meta name="Description" CONTENT="{{ data.comment }}">
+    {% else %}
+    <title>プロデューサー検索 - deresute.me</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@marcan42x">
+    <meta name="twitter:title" content="deresute.me - プロデューサー検索">
+    <meta name="twitter:description" content="プロデューサーのバナーを作りましょう！">
+    <meta name="twitter:image" content="https://deresute.me/static/icon_large.png">
+    <meta name="twitter:image:width" content="248">
+    <meta name="twitter:image:height" content="248">
+
+    <meta property="og:title" content="deresute.me - プロデューサー検索">
+    <meta property="og:image" content="https://deresute.me/static/icon_large.png">
+    <meta name="Description" CONTENT="デレステのプロデューサー検索サイトです。バナーを作りましょう！">
+    {% endif %}
+    <script src="/static/jquery-1.6.1.min.js" type="text/javascript"></script>
+    {% if snapshot %}
+    <script type="text/javascript">
+        snapshot = "{{ snapshot }}";
+        function load(size) {
+            $("#ssel a").removeClass("sel");
+            $("#ssel #"+size).addClass("sel");
+            var image = $("#im");
+            image.removeAttr('src').replaceWith(image.clone());
+            var ref = "/snap/" + snapshot + "/" + size
+            $("#im").attr("src", ref);
+            $("#im").css("background", "");
+            $("#im").load(function() {$("#im").css("background", "none");});
+            if (size == "large") {
+                $("#im").attr("width", 811);
+                $("#im").attr("height", 124);
+            } else if (size == "medium") {
+                $("#im").attr("width", 540);
+                $("#im").attr("height", 82);
+            } else if (size == "small") {
+                $("#im").attr("width", 405);
+                $("#im").attr("height", 62);
+            }
+            var url = "https://deresute.me" + ref;
+            $("#url").text(url).attr("href", ref);
+            $("#dl").attr("href", ref + "?dl");
+        }
+        $(document).ready(function() {
+            $("#small").click(function(event) {
+                event.preventDefault();
+                load("small");
+            });
+            $("#medium").click(function(event) {
+                event.preventDefault();
+                load("medium");
+            });
+            $("#large").click(function(event) {
+                event.preventDefault();
+                load("large");
+            });
+            load("large");
+        });
+    </script>
+    {% else %}
+    <script type="text/javascript">
+        cur_size = "large";
+        cur_privacy = 0;
+        cur_gameid = "";
+        function load(gameid, size, privacy) {
+            if (cur_gameid != gameid) {
+                history.pushState("", "", "/" + gameid);
+                document.title = "プロデューサー検索 - deresute.me"
+            }
+            cur_gameid = gameid
+            cur_size = size
+            cur_privacy = privacy
+            $("#gameid").val(gameid);
+            $("#ssel a").removeClass("sel");
+            $("#ssel #"+size).addClass("sel");
+            $("#psel a").removeClass("sel");
+            $("#psel #p"+privacy).addClass("sel");
+            var image = $("#im");
+            image.removeAttr('src').replaceWith(image.clone());
+            if (privacy == 0) {
+                var ref = "/" + gameid + "/" + size
+                var snap = "/" + gameid + "/snap"
+            } else {
+                var ref = "/" + gameid + "/p" + privacy + "/" + size
+                var snap = "/" + gameid + "/p" + privacy + "/snap"
+            }
+            $("#im").attr("src", ref);
+            $("#im").css("background", "");
+            $("#im").load(function() {$("#im").css("background", "none");});
+            if (size == "large") {
+                $("#im").attr("width", 811);
+                $("#im").attr("height", 124);
+            } else if (size == "medium") {
+                $("#im").attr("width", 540);
+                $("#im").attr("height", 82);
+            } else if (size == "small") {
+                $("#im").attr("width", 405);
+                $("#im").attr("height", 62);
+            }
+            var url = "https://deresute.me" + ref;
+            var baseurl = "https://deresute.me/" + gameid;
+            $("#url").text(url).attr("href", ref);
+            $("#raw").attr("href", "/" + gameid + "/json");
+            $("#snapshot").attr("href", snap);
+            $("#dl").attr("href", ref + "?dl");
+            $("#tweet").attr("href", "https://twitter.com/intent/tweet?url=" + baseurl);
+            $("#result").show();
+        }
+        function loadurl() {
+            var m = /^\/([0-9]{9})$/.exec(window.location.pathname);
+            if (m) {
+                cur_gameid = m[1];
+                load(m[1], "large", 0);
+            } else {
+                $("#result").hide();
+                $("#gameid").val("");
+            }
+        }
+        $(document).ready(function() {
+            $("#form").submit(function(event) {
+                event.preventDefault();
+                var val = $("#gameid").val();
+                var re = /^[0-9]{9}$/;
+                if (!re.test(val)) {
+                    return;
+                }
+                load(val, cur_size, cur_privacy);
+            });
+            $("#small").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, "small", cur_privacy);
+            });
+            $("#medium").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, "medium", cur_privacy);
+            });
+            $("#large").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, "large", cur_privacy);
+            });
+            $("#p0").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, cur_size, 0);
+            });
+            $("#p1").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, cur_size, 1);
+            });
+            $("#p2").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, cur_size, 2);
+            });
+            $("#p3").click(function(event) {
+                event.preventDefault();
+                load(cur_gameid, cur_size, 3);
+            });
+            $("#id_marcan").click(function(event) {
+                event.preventDefault();
+                load(537349288, "large", 0);
+            });
+            loadurl();
+            window.onpopstate = loadurl;
+        });
+    </script>
+    {% endif %}
+</head>
+<body>
+    <div id="wrapper"> 
+        {% if not snapshot %}
+        <h2>プロデューサー検索</h2>
+        <form id="form" action="#">
+            <input id="gameid" type="text" maxlength="9" placeholder="ゲームIDを入力">
+            <input id="submit" type="submit" value="検索">
+        </form>
+        <div id="result" style="display: none">
+        {% else %}
+        <div class="header">
+            <a class="btn-lg back" href="/"><i class="icon-arrow-left"></i></a>
+            <h3>スナップショット</h3>
+            <p>{{ data.timestamp_fmt }}</p>
+        </div>
+        <div id="result">
+        {% endif %}
+            <div class="sel" id="ssel">
+                サイズ&nbsp;
+                <a id="small" href="#">S</a>
+                <a id="medium" href="#">M</a>
+                <a id="large" href="#">L</a>
+                <br>
+            </div>
+            {% if not snapshot %}
+            <div class="sel" id="psel">
+                プライバシー&nbsp;
+                <a id="p0" href="#">0</a>
+                <a id="p1" href="#">1</a>
+                <a id="p2" href="#">2</a>
+                <a id="p3" href="#">3</a>
+                <br>
+            </div>
+            {% endif %}
+            <br>
+            <img id="im" src="" width="811" height="124"><br>
+            <a class="btn-lg tt" id="dl" href="#" ><i class="icon-download"></i><span><p>ダウンロード</p></span></a>
+            {% if snapshot %}
+            <a class="btn-lg tt" href="https://twitter.com/intent/tweet?url=https://deresute.me/snap/{{ snapshot }}" ><i class="icon-twitter"></i><span><p>ツイート</p></span></a>
+            {% if data.id %}
+            <a class="btn-lg tt" href="/{{ data.id }}"><i class="icon-refresh"></i><span><p>更新</p></span></a>
+            {% endif %}
+            {% else %}
+            <a class="btn-lg tt" id="tweet" href="#" ><i class="icon-twitter"></i><span><p>ツイート</p></span></a>
+            <a class="btn-lg tt" id="snapshot" href="#"><i class="icon-time"></i><span><p>スナップショット</p></span></a>
+            {% endif %}
+            <br>
+            <div class="sub">
+                <pre>&lt;img src="<a id="url" href="#"></a>"&gt;</pre>
+                <pre><a id="raw" href="{% if snapshot %}/snap/{{ snapshot }}/json{% else %}#{% endif %}">生データ</a></pre>
+            </div>
+        </div>
+        <div id="footer">
+            Built by <a href="https://twitter.com/marcan42x">@marcan42x</a> · <a id="id_marcan" href="/537349288">537349288</a> | This site is not endorsed by nor affiliated with BANDAI NAMCO.
+        </div>
+    </div>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-73003970-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

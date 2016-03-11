@@ -1,0 +1,34 @@
+{
+  "comment": "ミナミ？あ、メンテナンスですね！",
+  "cleared": {
+    "pro": 99,
+    "debut": 99,
+    "master": 99,
+    "normal": 99
+  },
+  "full_combo": {
+    "pro": 99,
+    "debut": 99,
+    "master": 99,
+    "normal": 99
+  },
+  "leader_card": {
+    "love": 999,
+    "level": 99,
+    "exp": 999999,
+    "skill_level": 99,
+    "star_rank": 99,
+    "id": 200118
+  },
+  "name": "アナスタシア",
+  "level": 999,
+  "timestamp": 0,
+  "rank": 8,
+  "album_no": 9999,
+  "fan": 99999999,
+  "prp": 9999,
+  "creation_ts": 0,
+  "commu_no": 9999,
+  "id": -2,
+  "last_login_ts": 0
+}

@@ -1,0 +1,8 @@
+*.pyc
+account.py
+secrets.py
+
+data/*/*
+!data/*/.keep
+
+static/error_*.png
