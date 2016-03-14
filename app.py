@@ -390,5 +390,10 @@ def get_size_priv(user_id, privacy, size):
 def get_500():
     raise Exception("Exception test")
 
+@app.route("/res_ver")
+def get_res_ver():
+    update_resources()
+    return g_client.res_ver
+
 if __name__ == "__main__":
     app.run()
