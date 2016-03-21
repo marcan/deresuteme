@@ -44,6 +44,8 @@ class ProducerInfo(object):
         self.last_login_ts = parse_ts(d["friend_info"]["user_info"]["last_login_time"])
         self.id = d["friend_info"]["user_info"]["viewer_id"]
         self.emblem_id = d["friend_info"]["user_info"].get("emblem_id", 1000001)
+        if self.emblem_id == 0:
+            self.emblem_id = 1000001
 
         self.leader_card = {
             u"love": int(d["friend_info"]["leader_card_info"]["love"]),
@@ -76,6 +78,8 @@ class ProducerInfo(object):
         for k in self.KEYS:
             if k in v:
                 setattr(self, k, v[k])
+        if self.emblem_id == 0:
+            self.emblem_id = 1000001
         return self
 
 if __name__ == "__main__":
