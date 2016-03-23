@@ -10,13 +10,13 @@
     <meta name="twitter:creator" content="@marcan42x">
     <meta name="twitter:title" content="{{ data.name }}【{{ data.timestamp_fmt }}】- deresute.me">
     <meta name="twitter:description" content="{{ data.comment }}">
-    <meta name="twitter:image" content="https://deresute.me/snap/{{ snapshot }}/twcard">
+    <meta name="twitter:image" content="https://deresute.me/s/{{ snapshot }}/twcard">
     <meta name="twitter:image:width" content="811">
     <meta name="twitter:image:height" content="434">
 
     <meta property="og:title" content="{{ data.name }}【{{ data.timestamp_fmt }}】- deresute.me">
-    <meta property="og:image" content="https://deresute.me/snap/{{ snapshot }}/square">
-    <meta property="og:url" content="https://deresute.me/snap/{{ snapshot }}">
+    <meta property="og:image" content="https://deresute.me/s/{{ snapshot }}/square">
+    <meta property="og:url" content="https://deresute.me/s/{{ snapshot }}">
     <meta name="Description" CONTENT="{{ data.comment }}">
     {% elif data %}
     <title>{{ data.name }} - deresute.me</title>
@@ -55,7 +55,7 @@
             $("#ssel #"+size).addClass("sel");
             var image = $("#im");
             image.removeAttr('src').replaceWith(image.clone());
-            var ref = "/snap/" + snapshot + "/" + size
+            var ref = "/s/" + snapshot + "/" + size
             $("#im").attr("src", ref);
             $("#im").css("background", "");
             $("#im").load(function() {$("#im").css("background", "none");});
@@ -234,7 +234,7 @@
             <img id="im" src="" width="811" height="124"><br>
             <a class="btn-lg tt" id="dl" href="#" ><i class="icon-download"></i><span><p>ダウンロード</p></span></a>
             {% if snapshot %}
-            <a class="btn-lg tt" href="https://twitter.com/intent/tweet?url=https://deresute.me/snap/{{ snapshot }}" ><i class="icon-twitter"></i><span><p>ツイート</p></span></a>
+            <a class="btn-lg tt" href="https://twitter.com/intent/tweet?url=https://deresute.me/s/{{ snapshot }}" ><i class="icon-twitter"></i><span><p>ツイート</p></span></a>
             {% if data.id %}
             <a class="btn-lg tt" href="/{{ data.id }}"><i class="icon-refresh"></i><span><p>更新</p></span></a>
             {% endif %}
@@ -245,7 +245,7 @@
             <br>
             <div class="sub">
                 <pre>&lt;img src="<a id="url" href="#"></a>"&gt;</pre>
-                <pre><a id="raw" href="{% if snapshot %}/snap/{{ snapshot }}/json{% else %}#{% endif %}">生データ</a></pre>
+                <pre><a id="raw" href="{% if snapshot %}/s/{{ snapshot }}/json{% else %}#{% endif %}">生データ</a></pre>
             </div>
         </div>
         <div id="footer">

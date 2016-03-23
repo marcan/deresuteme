@@ -297,7 +297,7 @@ def try_make_snap(user_id, privacy):
             with open(path, "w") as fd:
                 fd.write(d)
         get_cache(SNAPSHOT_DIR, "%s.json" % h, save_json)
-        uri = "/snap/" + h
+        uri = "/s/" + h
     except APIError as e:
         if e.code not in (1457, 101):
             app.logger.exception("API error for %r/%r" % (user_id, privacy))
@@ -329,11 +329,13 @@ def index_user(user_id):
         return index()
 
 @app.route("/snap/<snap>")
+@app.route("/s/<snap>")
 def index_snap(snap):
     data = load_snap(snap)
     return render_template('index.html', data=data, snapshot=snap)
 
 @app.route("/snap/<snap>/json")
+@app.route("/s/<snap>/json")
 def get_snap_json(snap):
     data = load_snap(snap)
     resp = make_response(data.to_json())
@@ -341,6 +343,7 @@ def get_snap_json(snap):
     return data.to_json(), 200, {"Content-Type": "application/json"}
 
 @app.route("/snap/<snap>/<size>")
+@app.route("/s/<snap>/<size>")
 def get_snap(snap, size):
     return try_get_snap(snap, size)
 
