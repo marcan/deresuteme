@@ -111,10 +111,10 @@
             image.removeAttr('src').replaceWith(image.clone());
             if (privacy == 0) {
                 var ref = "/" + gameid + "/" + size
-                var snap = "/" + gameid + "/snap"
+                var snap_base = "/" + gameid
             } else {
                 var ref = "/" + gameid + "/p" + privacy + "/" + size
-                var snap = "/" + gameid + "/p" + privacy + "/snap"
+                var snap_base = "/" + gameid + "/p" + privacy
             }
             $("#im").attr("src", ref);
             $("#im").css("background", "");
@@ -133,9 +133,9 @@
             var baseurl = "https://deresute.me/" + gameid;
             $("#url").text(url).attr("href", ref);
             $("#raw").attr("href", "/" + gameid + "/json");
-            $("#snapshot").attr("href", snap);
+            $("#snapshot").attr("href", snap_base + "/snap");
             $("#dl").attr("href", ref + "?dl");
-            $("#tweet").attr("href", "https://twitter.com/intent/tweet?url=" + baseurl);
+            $("#tweet").attr("href", snap_base + "/tweet");
             $("#result").show();
         }
         function loadurl() {

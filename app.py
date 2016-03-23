@@ -287,7 +287,7 @@ def try_get_snap(snap, sizename):
         res.headers['Content-Disposition'] = 'attachment; filename=snap_%s_%s.png' % (snap, sizename)
     return res
 
-def try_make_snap(user_id, privacy):
+def try_make_snap(user_id, privacy, tweet=False):
     try:
         data, mtime = get_data(user_id, max_age=60)
         privatize(data, privacy)
@@ -297,15 +297,17 @@ def try_make_snap(user_id, privacy):
             with open(path, "w") as fd:
                 fd.write(d)
         get_cache(SNAPSHOT_DIR, "%s.json" % h, save_json)
-        uri = "/s/" + h
+        if tweet:
+            return redirect("https://twitter.com/intent/tweet?url=https://deresute.me/s/" + h)
+        else:
+            return redirect("/s/" + h)
     except APIError as e:
         if e.code not in (1457, 101):
             app.logger.exception("API error for %r/%r" % (user_id, privacy))
-        uri = "/%d" % user_id
+        return redirect("/%d" % user_id)
     except Exception as e:
         app.logger.exception("Exception thrown for %r/%r" % (user_id, privacy))
-        uri = "/%d" % user_id
-    return redirect(uri)
+        return redirect("/%d" % user_id)
 
 @app.route("/")
 def index():
@@ -373,11 +375,21 @@ def get_json(user_id):
 def make_snap(user_id):
     return try_make_snap(user_id, 0)
 
+@app.route("/<int:user_id>/tweet")
+def make_snap_and_tweet(user_id):
+    return try_make_snap(user_id, 0, tweet=True)
+
 @app.route("/<int:user_id>/p<int:privacy>/snap")
 def make_snap_priv(user_id, privacy):
     if privacy not in (1,2,3):
         abort(404)
     return try_make_snap(user_id, privacy)
+
+@app.route("/<int:user_id>/p<int:privacy>/tweet")
+def make_snap_priv_and_tweet(user_id, privacy):
+    if privacy not in (1,2,3):
+        abort(404)
+    return try_make_snap(user_id, privacy, tweet=True)
 
 @app.route("/<int:user_id>/<size>")
 def get_size(user_id, size):
