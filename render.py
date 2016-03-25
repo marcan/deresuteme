@@ -15,10 +15,9 @@ ET.register_namespace('svg', "http://www.w3.org/2000/svg")
 ET.register_namespace('xlink', "http://www.w3.org/1999/xlink")
 
 def get_card(cardid, mgr, f):
-    path = mgr.get("card_%d_s.unity3d" % cardid)
+    path = mgr.get("card_%d_m.unity3d" % cardid)
     im = decode.load_image(open(path))
     w, h = im.size
-    im = im.resize((w*2, h*2), PIL.Image.NEAREST)
     im.save(f, format="PNG", compress_level=0)
 
 def get_emblem(emblemid, mgr, f):
