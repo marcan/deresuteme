@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -!- coding: utf-8 -!-
-import os.path, os, random, threading, time, json, logging, base64, hashlib
+import os.path, os, random, threading, time, json, logging, base64, hashlib, StringIO
 from PIL import Image
 
-import account, render, apiclient, resource_mgr
+import account, render, apiclient, resource_mgr, decode
 from info import ProducerInfo
 
 from flask import Flask, send_file, request, make_response, abort, render_template, redirect
@@ -409,6 +409,21 @@ def get_500():
 def get_res_ver():
     update_resources()
     return g_client.res_ver
+
+@app.route("/res/<resource>")
+def get_resource(resource):
+    update_resources()
+    try:
+        res = g_resmgr.get(resource + ".unity3d")
+    except resource_mgr.ResourceError:
+        abort(404)
+
+    im = decode.load_image(open(res))
+    fd = StringIO.StringIO()
+    im.save(fd, format="PNG")
+    rs = make_response(fd.getvalue())
+    rs.headers['Content-Type'] = 'image/png'
+    return rs
 
 if __name__ == "__main__":
     app.run()
