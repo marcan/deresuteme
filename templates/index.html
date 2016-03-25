@@ -110,12 +110,11 @@
             var image = $("#im");
             image.removeAttr('src').replaceWith(image.clone());
             if (privacy == 0) {
-                var ref = "/" + gameid + "/" + size
-                var snap_base = "/" + gameid
+                var id_priv = "/" + gameid
             } else {
-                var ref = "/" + gameid + "/p" + privacy + "/" + size
-                var snap_base = "/" + gameid + "/p" + privacy
+                var id_priv = "/" + gameid + "/p" + privacy
             }
+            var ref = id_priv + "/" + size;
             $("#im").attr("src", ref);
             $("#im").css("background", "");
             $("#im").load(function() {$("#im").css("background", "none");});
@@ -133,9 +132,10 @@
             var baseurl = "https://deresute.me/" + gameid;
             $("#url").text(url).attr("href", ref);
             $("#raw").attr("href", "/" + gameid + "/json");
-            $("#snapshot").attr("href", snap_base + "/snap");
+            $("#snapshot").attr("href", id_priv + "/snap");
             $("#dl").attr("href", ref + "?dl");
-            $("#tweet").attr("href", snap_base + "/tweet");
+            $("#huge").attr("href", id_priv + "/huge");
+            $("#tweet").attr("href", id_priv + "/tweet");
             $("#result").show();
         }
         function loadurl() {
@@ -218,6 +218,7 @@
                 <a id="small" href="#">S</a>
                 <a id="medium" href="#">M</a>
                 <a id="large" href="#">L</a>
+                <a id="huge" href="{% if not snapshot %}#{% else %}/{{ data.id }}/huge{% endif %}">XL</a>
                 <br>
             </div>
             {% if not snapshot %}
