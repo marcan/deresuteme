@@ -103,6 +103,7 @@ class Def(object):
         if self.array:
             #print "a", self.name
             size = self.children[0].read(s)
+            assert size < 10000000
             if self.children[1].type_name in ("UInt8","char"):
                 #print "s", size
                 return s.read(size)
@@ -153,6 +154,7 @@ class Asset(object):
     def decode_data(self):
         count = struct.unpack("<I", self.s.read(4))[0]
         objs = []
+        assert count < 1024
         for i in xrange(count):
             self.s.align(4)
             pathId, off, size, t1, t2, unk = struct.unpack("<QIIIH2xB", self.s.read(25))
@@ -171,7 +173,8 @@ class Asset(object):
         stab = self.s.read(stab_len)
         
         defs = []
-        for i in range(attr_cnt):
+        assert attr_cnt < 1024
+        for i in xrange(attr_cnt):
             a1, a2, level, a4, type_off, name_off, size, idx, flags = struct.unpack("<BBBBIIIII", attrs[i*24:i*24+24])
             if name_off & 0x80000000:
                 name = baseStrings[name_off & 0x7fffffff]
@@ -182,6 +185,7 @@ class Asset(object):
             else:
                 type_name = stab[type_off:].split("\0")[0]
             d = defs
+            assert level < 16
             for i in range(level):
                 d = d[-1]
             if size == 0xffffffff:
