@@ -39,11 +39,11 @@ class ProducerInfo(object):
         self.prp = int(d["prp"])
         self.fan = int(d["friend_info"]["user_info"]["fan"])
         self.commu_no = int(d["story_number"])
-        self.album_no = d["album_number"]
+        self.album_no = int(d["album_number"])
         self.creation_ts = parse_ts(d["friend_info"]["user_info"]["create_time"])
         self.last_login_ts = parse_ts(d["friend_info"]["user_info"]["last_login_time"])
         self.id = d["friend_info"]["user_info"]["viewer_id"]
-        self.emblem_id = d["friend_info"]["user_info"].get("emblem_id", 1000001)
+        self.emblem_id = int(d["friend_info"]["user_info"].get("emblem_id", 1000001))
         if self.emblem_id == 0:
             self.emblem_id = 1000001
 
