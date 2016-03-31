@@ -425,5 +425,9 @@ def get_resource(resource):
     rs.headers['Content-Type'] = 'image/png'
     return rs
 
+@app.route('/robots.txt')
+def robots_txt():
+    return send_file("static/robots.txt")
+
 if __name__ == "__main__":
     app.run()
