@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /*/snap$
-Disallow: /*/tweet$
-
