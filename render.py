@@ -30,7 +30,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     root = tree.getroot()
     width, height = int(root.attrib["width"]), int(root.attrib["height"])
 
-    if data.leader_card["id"] == -2:
+    if True: #data.leader_card["id"] == -2:
         card_icon = open(base + "chihiro2x.png", "r").read()
     else:
         if card_cache is None:
