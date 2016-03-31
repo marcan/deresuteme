@@ -190,6 +190,12 @@
                 event.preventDefault();
                 load(537349288, "large", 0);
             });
+            $("#snapshot,#tweet").click(function(event) {
+                event.preventDefault();
+                console.log(this.href);
+                $("#pf").attr("action", this.href);
+                $("#pf").submit();
+            })
             loadurl();
             window.onpopstate = loadurl;
         });
@@ -254,7 +260,7 @@
             Built by <a href="https://twitter.com/marcan42x">@marcan42x</a> · <a id="id_marcan" href="/537349288">537349288</a> | This site is not endorsed by nor affiliated with BANDAI NAMCO.
         </div>
     </div>
-
+    <form id="pf" action="#" method="POST" style="display: none"></form>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

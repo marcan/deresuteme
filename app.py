@@ -371,21 +371,21 @@ def get_json(user_id):
         resp.mimetype = "application/json"
         return resp
 
-@app.route("/<int:user_id>/snap")
+@app.route("/<int:user_id>/snap", methods=['POST'])
 def make_snap(user_id):
     return try_make_snap(user_id, 0)
 
-@app.route("/<int:user_id>/tweet")
+@app.route("/<int:user_id>/tweet", methods=['POST'])
 def make_snap_and_tweet(user_id):
     return try_make_snap(user_id, 0, tweet=True)
 
-@app.route("/<int:user_id>/p<int:privacy>/snap")
+@app.route("/<int:user_id>/p<int:privacy>/snap", methods=['POST'])
 def make_snap_priv(user_id, privacy):
     if privacy not in (1,2,3):
         abort(404)
     return try_make_snap(user_id, privacy)
 
-@app.route("/<int:user_id>/p<int:privacy>/tweet")
+@app.route("/<int:user_id>/p<int:privacy>/tweet", methods=['POST'])
 def make_snap_priv_and_tweet(user_id, privacy):
     if privacy not in (1,2,3):
         abort(404)
