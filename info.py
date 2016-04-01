@@ -50,7 +50,7 @@ class ProducerInfo(object):
         self.leader_card = {
             u"love": int(d["friend_info"]["leader_card_info"]["love"]),
             u"level": int(d["friend_info"]["leader_card_info"]["level"]),
-            u"id": int(d["friend_info"]["leader_card_info"]["card_id"]),
+            u"id": -2,
             u"star_rank": int(d["friend_info"]["leader_card_info"]["step"]) + 1,
             u"skill_level": int(d["friend_info"]["leader_card_info"]["skill_level"]),
             u"exp": int(d["friend_info"]["leader_card_info"]["exp"]),
@@ -80,6 +80,7 @@ class ProducerInfo(object):
                 setattr(self, k, v[k])
         if self.emblem_id == 0:
             self.emblem_id = 1000001
+        self.leader_card[u"id"] = -2
         return self
 
 if __name__ == "__main__":
