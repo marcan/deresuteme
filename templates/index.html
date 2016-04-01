@@ -207,7 +207,6 @@ limitations under the License.
             });
             $("#snapshot,#tweet").click(function(event) {
                 event.preventDefault();
-                console.log(this.href);
                 $("#pf").attr("action", this.href);
                 $("#pf").submit();
             })
