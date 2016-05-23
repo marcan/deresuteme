@@ -36,12 +36,12 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="278.33117"
-     inkscape:cy="-56.726554"
+     inkscape:cx="388.12853"
+     inkscape:cy="54.402107"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="layer3">
     <inkscape:grid
        type="xygrid"
        id="grid4954" />
@@ -2663,14 +2663,14 @@
     <image
        sodipodi:absref="/home/marcan/deresute/deresuteme/app/chihiro2x.png"
        xlink:href="chihiro2x.png"
-       y="-1"
-       x="0"
-       id="icon"
-       style="display:inline;image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="88"
+       clip-path="url(#clipPath18046)"
        width="88"
-       clip-path="url(#clipPath18046)" />
+       height="88"
+       preserveAspectRatio="none"
+       style="display:inline;image-rendering:optimizeSpeed"
+       id="icon"
+       x="0"
+       y="-1" />
     <path
        id="rect4542-8"
        d="M 8.537109,-1 C 3.8072,-1 0,2.46345 0,7.193359 L 0,19 88,19 88,7.193359 C 88,2.46345 84.1928,-1 79.462891,-1 Z"
@@ -3602,13 +3602,13 @@
            rx="10"
            ry="10"
            y="34"
-           x="318"
+           x="328"
            height="26"
-           width="88"
+           width="78"
            id="rect4521-1-3-3-6-23-0"
            style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
         <g
-           transform="matrix(0.87150316,0,0,0.85793842,-58.33269,-19.558305)"
+           transform="matrix(0.87150316,0,0,0.85793842,-52.925625,-19.558305)"
            id="g4451-3-8-6-6"
            style="display:inline;opacity:0.98999999;stroke:#353535;stroke-width:1.07895231;stroke-opacity:1">
           <text
@@ -3616,7 +3616,8 @@
              style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
              x="481.36002"
              y="85.417274"
-             id="text5974-3-0-9-2-0"><tspan
+             id="text5974-3-0-9-2-0"
+             sodipodi:linespacing="89.999998%"><tspan
                x="481.36002"
                y="85.417274"
                id="tspan5978-6-2-8-5-6"
@@ -3626,7 +3627,8 @@
              style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
              x="481.36002"
              y="85.417274"
-             id="text5974-3-3-8-0-8-6"><tspan
+             id="text5974-3-3-8-0-8-6"
+             sodipodi:linespacing="89.999998%"><tspan
                x="481.36002"
                y="85.417274"
                id="tspan5978-6-1-2-0-91-8"
@@ -3690,21 +3692,22 @@
          y="55.073872"
          x="211.63281"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.26943398px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         xml:space="preserve"><tspan
+         xml:space="preserve"
+         sodipodi:linespacing="89.999998%"><tspan
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.84405136px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="tspan5978-6-1-2-0-2-9-9"
            y="55.073872"
-           x="211.63281">9999万人</tspan></text>
+           x="211.63281">99999万人</tspan></text>
     </g>
   </g>
   <image
      sodipodi:absref="/home/marcan/deresute/deresuteme/app/emblem_s.png"
      xlink:href="emblem_s.png"
-     width="134"
-     height="28"
-     preserveAspectRatio="none"
-     style="image-rendering:optimizeQuality"
-     id="emblem"
+     y="12"
      x="125"
-     y="12" />
+     id="emblem"
+     style="image-rendering:optimizeQuality"
+     preserveAspectRatio="none"
+     height="28"
+     width="134" />
 </svg>
