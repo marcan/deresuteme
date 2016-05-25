@@ -59,7 +59,7 @@ class RequestFormatter(logging.Formatter):
 
 if not app.debug:
     import socket, pwd
-    from logging.handlers import SMTPHandler
+    from logging.handlers import SMTPHandler, WatchedFileHandler
     username = pwd.getpwuid(os.getuid()).pw_name
     mail_handler = SMTPHandler('127.0.0.1',
                                 '%s@%s' % (username, socket.getfqdn()),
@@ -67,7 +67,7 @@ if not app.debug:
     mail_handler.setLevel(logging.ERROR)
     app.logger.addHandler(mail_handler)
 
-    handler = logging.FileHandler(os.path.join(app.root_path, LOG_FILE))
+    handler = WatchedFileHandler(os.path.join(app.root_path, LOG_FILE))
     handler.setLevel(logging.INFO)
     handler.setFormatter(RequestFormatter())
     app.logger.addHandler(handler)
