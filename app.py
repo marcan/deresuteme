@@ -249,6 +249,8 @@ sizemap = {
 }
 
 def try_get_banner(user_id, sizename, privacy=0):
+    if sizename.endswith(".png"):
+        sizename = sizename[:-4]
     if sizename not in sizemap:
         abort(404)
     if len(str(user_id)) != 9:
@@ -292,6 +294,8 @@ def load_snap(snap):
     return data
 
 def try_get_snap(snap, sizename):
+    if sizename.endswith(".png"):
+        sizename = sizename[:-4]
     if sizename not in sizemap:
         abort(404)
     size = sizemap[sizename]
