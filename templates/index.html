@@ -110,6 +110,7 @@ limitations under the License.
         cur_privacy = 0;
         cur_gameid = "";
         function load(gameid, size, privacy) {
+            var urlbase = "https://deresute.me";
             if (cur_gameid != gameid) {
                 history.pushState("", "", "/" + gameid);
                 document.title = "プロデューサー検索 - deresute.me"
@@ -143,9 +144,17 @@ limitations under the License.
                 $("#im").attr("width", 405);
                 $("#im").attr("height", 62);
             }
-            var url = "https://deresute.me" + ref;
-            var baseurl = "https://deresute.me/" + gameid;
-            $("#url").text(url).attr("href", ref);
+            var url = urlbase + ref;
+            var baseurl = urlbase + "/" + gameid;
+            if (privacy == 0) {
+                $("#url").text(url).attr("href", ref);
+            } else {
+                $("#url").text("... loading ...").attr("href", "");
+                $.ajax(id_priv + "/blob").done(function(data) {
+                    var bloburl = urlbase + "/" + data + "/" + size;
+                    $("#url").text(bloburl).attr("href", bloburl);
+                });
+            }
             $("#raw").attr("href", "/" + gameid + "/json");
             $("#snapshot").attr("href", id_priv + "/snap");
             $("#dl").attr("href", ref + "?dl");

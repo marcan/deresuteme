@@ -15,8 +15,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os.path, os, random, threading, time, json, logging, base64, hashlib, StringIO
+import os.path, os, random, threading, time, json, logging, base64, hashlib, StringIO, struct
+from secrets import BLOB_KEY
 from PIL import Image
+from Crypto.Cipher import AES
 
 import account, render, apiclient, resource_mgr, decode
 from info import ProducerInfo
@@ -328,6 +330,23 @@ def try_make_snap(user_id, privacy, tweet=False):
         app.logger.exception("Exception thrown for %r/%r" % (user_id, privacy))
         return redirect("/%d" % user_id)
 
+def decode_blob(blob):
+    if len(blob) != 22:
+        abort(400)
+    try:
+        d = base64.b64decode(blob.encode("utf-8") + "==", "-_")
+        d = AES.new(BLOB_KEY).decrypt(d)
+        ver, user_id, privacy, check = struct.unpack("<BIB6x4s", d)
+    except:
+        abort(400)
+    if ver != 1:
+        abort(400)
+    if check != "\x00\x00\x00\x00":
+        abort(400)
+    if privacy not in (1,2,3):
+        abort(400)
+    return user_id, privacy
+
 @app.route("/")
 def index():
     return render_template('index.html', data=None, snapshot=None)
@@ -404,6 +423,14 @@ def make_snap_priv(user_id, privacy):
         abort(404)
     return try_make_snap(user_id, privacy)
 
+@app.route("/<int:user_id>/p<int:privacy>/blob")
+def make_blob(user_id, privacy):
+    if privacy not in (1,2,3):
+        abort(404)
+    d = struct.pack("<BIB6s4x", 1, user_id, privacy, os.urandom(6))
+    d = AES.new(BLOB_KEY).encrypt(d)
+    return base64.b64encode(d, "-_")[:-2]
+
 @app.route("/<int:user_id>/p<int:privacy>/tweet", methods=['POST'])
 def make_snap_priv_and_tweet(user_id, privacy):
     if privacy not in (1,2,3):
@@ -419,6 +446,11 @@ def get_size_priv(user_id, privacy, size):
     if privacy not in (1,2,3):
         abort(404)
     return try_get_banner(user_id, size, privacy=privacy)
+
+@app.route("/<blob>/<size>")
+def get_size_blob(blob, size):
+    user_id, privacy = decode_blob(blob)
+    return get_size_priv(user_id, privacy, size)
 
 @app.route("/test_500")
 def get_500():
