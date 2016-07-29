@@ -107,7 +107,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
         set_text("fc_" + k[0], str(v), grp=True)
     set_text("cardlevel", str(data.leader_card["level"]), grp=True)
 
-    if data.emblem_ex_value is not None:
+    if data.emblem_ex_value:
         set_text("emblem-rank", str(data.emblem_ex_value))
     else:
         set_text("emblem-rank", "")
