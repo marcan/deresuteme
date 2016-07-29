@@ -25,9 +25,9 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1176"
+     inkscape:window-height="1169"
      id="namedview681"
-     showgrid="true"
+     showgrid="false"
      inkscape:snap-global="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -35,13 +35,13 @@
      inkscape:snap-bbox-edge-midpoints="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="388.12853"
-     inkscape:cy="54.402107"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="235.62293"
+     inkscape:cy="100.60878"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3">
+     inkscape:current-layer="svg2">
     <inkscape:grid
        type="xygrid"
        id="grid4954" />
@@ -2663,14 +2663,14 @@
     <image
        sodipodi:absref="/home/marcan/deresute/deresuteme/app/chihiro2x.png"
        xlink:href="chihiro2x.png"
-       clip-path="url(#clipPath18046)"
-       width="88"
-       height="88"
-       preserveAspectRatio="none"
-       style="display:inline;image-rendering:optimizeSpeed"
-       id="icon"
+       y="-1"
        x="0"
-       y="-1" />
+       id="icon"
+       style="display:inline;image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="88"
+       width="88"
+       clip-path="url(#clipPath18046)" />
     <path
        id="rect4542-8"
        d="M 8.537109,-1 C 3.8072,-1 0,2.46345 0,7.193359 L 0,19 88,19 88,7.193359 C 88,2.46345 84.1928,-1 79.462891,-1 Z"
@@ -3703,11 +3703,23 @@
   <image
      sodipodi:absref="/home/marcan/deresute/deresuteme/app/emblem_s.png"
      xlink:href="emblem_s.png"
-     y="12"
-     x="125"
-     id="emblem"
-     style="image-rendering:optimizeQuality"
-     preserveAspectRatio="none"
+     width="134"
      height="28"
-     width="134" />
+     preserveAspectRatio="none"
+     style="image-rendering:optimizeQuality"
+     id="emblem"
+     x="125"
+     y="12" />
+  <text
+     transform="scale(1.0071213,0.99292906)"
+     id="emblem-rank"
+     y="33.1721"
+     x="242.26471"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.27655792px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     xml:space="preserve"
+     sodipodi:linespacing="89.999998%"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.07609081px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="tspan5978-6-1-2-0-2-9-9-6"
+       y="33.1721"
+       x="221.90967">9999999</tspan></text>
 </svg>

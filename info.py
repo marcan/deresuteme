@@ -35,6 +35,7 @@ class ProducerInfo(object):
     
     def __init__(self, data=None):
         self.emblem_id = 1000001
+        self.emblem_ex_value = None
         if data is not None:
             self.load_data(data)
         
@@ -59,6 +60,7 @@ class ProducerInfo(object):
         self.last_login_ts = parse_ts(d["friend_info"]["user_info"]["last_login_time"])
         self.id = d["friend_info"]["user_info"]["viewer_id"]
         self.emblem_id = int(d["friend_info"]["user_info"].get("emblem_id", 1000001))
+        self.emblem_ex_value = int(d["friend_info"]["user_info"].get("emblem_ex_value", None))
         if self.emblem_id == 0:
             self.emblem_id = 1000001
 
@@ -81,7 +83,8 @@ class ProducerInfo(object):
 
     KEYS = ["timestamp", "id", "commu_no", "prp", "album_no", "name", "comment",
             "fan", "level", "rank", "creation_ts", "last_login_ts",
-            "leader_card", "cleared", "full_combo", "emblem_id"]
+            "leader_card", "cleared", "full_combo", "emblem_id",
+            "emblem_ex_value"]
 
     def to_json(self):
         return json.dumps({k: getattr(self, k) for k in self.KEYS})
