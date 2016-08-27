@@ -96,28 +96,35 @@ class APIError(Exception):
         Exception.__init__(self, "API error %d" % code)
         self.code = code
 
+def do_check():
+    args = {
+        "campaign_data": "",
+        "campaign_user": 1337,
+        "campaign_sign": "fb9d4400538f6ca7c1bab38f274afac1",
+        "app_type": 0,
+    }
+    check = g_client.call("/load/check", args)
+    app.logger.info("Check result: %r", check)
+    return check
+
+def new_resources(res_ver):
+    app.logger.info("Resource update: %s", g_client.res_ver)
+    g_client.res_ver = res_ver
+    do_check()
+    g_resmgr = resource_mgr.ResourceManager(g_client.res_ver, RESOURCES_DIR, app.logger)
+    g_last_check = time.time()
+
 def update_resources():
     global g_lock, g_client, g_last_fetch, g_last_check, g_resmgr
 
     with g_lock:
         check_age = time.time() - g_last_check
         if check_age > RES_POLL or g_resmgr is None:
-            args = {
-                "campaign_data": "",
-                "campaign_user": 1337,
-                "campaign_sign": "fb9d4400538f6ca7c1bab38f274afac1",
-                "app_type": 0,
-            }
             app.logger.info("Check age is %d, invoking check", check_age)
-            check = g_client.call("/load/check", args)
-            app.logger.info("Check result: %r", check)
+            check = do_check()
             if "required_res_ver" in check["data_headers"]:
-                g_client.res_ver = check["data_headers"]["required_res_ver"]
-                app.logger.info("Resource update: %s", g_client.res_ver)
                 time.sleep(1.1)
-                check = g_client.call("/load/check", args)
-                app.logger.info("Check result: %r", check)
-                g_resmgr = resource_mgr.ResourceManager(g_client.res_ver, RESOURCES_DIR, app.logger)
+                new_resources(check["data_headers"]["required_res_ver"])
             g_last_check = time.time()
 
 def load_info(user_id, dst):
@@ -126,15 +133,22 @@ def load_info(user_id, dst):
 
     update_resources()
 
-    with g_lock:
-        left = g_last_fetch + THROTTLE - time.time()
-        if left > 0:
-            app.logger.info("Throttling: %r sec", left)
-            time.sleep(left)
+    while True:
+        with g_lock:
+            left = g_last_fetch + THROTTLE - time.time()
+            if left > 0:
+                app.logger.info("Throttling: %r sec", left)
+                time.sleep(left)
 
-        d = g_client.call("/profile/get_profile", {"friend_id": user_id})
-        app.logger.info("Result: %r", d)
-        g_last_fetch = time.time()
+            d = g_client.call("/profile/get_profile", {"friend_id": user_id})
+            app.logger.info("Result: %r", d)
+            g_last_fetch = time.time()
+            if "required_res_ver" in d["data_headers"]:
+                app.logger.info("Query failed due to stale res_ver, updating")
+                time.sleep(1.1)
+                new_resources(d["data_headers"]["required_res_ver"])
+                continue
+            break
 
     with open(dst, "w") as fd:
         json.dump(d, fd)
