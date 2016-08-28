@@ -97,6 +97,7 @@ class APIError(Exception):
         self.code = code
 
 def do_check():
+    global g_client
     args = {
         "campaign_data": "",
         "campaign_user": 1337,
@@ -108,6 +109,7 @@ def do_check():
     return check
 
 def new_resources(res_ver):
+    global g_client, g_resmgr, g_last_check
     app.logger.info("Resource update: %s", g_client.res_ver)
     g_client.res_ver = res_ver
     do_check()
