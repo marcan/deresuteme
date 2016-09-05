@@ -112,7 +112,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     else:
         set_text("emblem-rank", "")
 
-    for i, rank in enumerate(["f", "e", "d", "c", "b", "a", "s", "ss"]):
+    for i, rank in enumerate(["f", "e", "d", "c", "b", "a", "s", "ss", "sss"]):
         if (i+1) != data.rank:
             root.find('.//svg:g[@id="rk_%s"]'%rank, ns).clear()
 
