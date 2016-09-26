@@ -80,8 +80,16 @@ class ApiClient(object):
             "Content-Type": "application/x-www-form-urlencoded", # lies
             "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 13.3.7; Nexus 42 Build/XYZZ1Y)",
         }
-        req = urllib2.Request(self.BASE + path, body, headers)
-        reply = base64.b64decode(urllib2.urlopen(req).read())
+        for i in range(3):
+            try:
+                req = urllib2.Request(self.BASE + path, body, headers)
+                reply = urllib2.urlopen(req).read()
+            except urllib2.URLError as e:
+                if i > 2:
+                    raise
+                else:
+                    continue
+        reply = base64.b64decode(reply)
         plain = decrypt_cbc(reply[:-32], msg_iv, reply[-32:]).split("\0")[0]
         msg = msgpack.unpackb(base64.b64decode(plain))
         try:
