@@ -113,7 +113,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
         set_text("emblem-rank", "")
 
     for i, rank in enumerate(["f", "e", "d", "c", "b", "a", "s", "ss", "sss"]):
-        if (i+1) != data.rank:
+        if (i+1) != data.rank and not (rank == "sss" and data.rank == 100):
             root.find('.//svg:g[@id="rk_%s"]'%rank, ns).clear()
 
     img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 2*width, 2*height)
