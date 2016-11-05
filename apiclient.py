@@ -34,7 +34,7 @@ def encrypt_cbc(s, iv, key):
 
 class ApiClient(object):
     BASE = "http://game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10016450"):
+    def __init__(self, user, viewer_id, udid, res_ver="10020700"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
@@ -86,7 +86,7 @@ class ApiClient(object):
                 req = urllib2.Request(self.BASE + path, body, headers)
                 reply = urllib2.urlopen(req).read()
             except urllib2.URLError as e:
-                if i > 2:
+                if i >= 2:
                     raise
                 else:
                     continue
@@ -100,6 +100,7 @@ class ApiClient(object):
         return msg
 
 if __name__ == "__main__":
+    import sys, pprint
     from account import user_id, viewer_id, udid
     client = ApiClient(user_id, viewer_id, udid)
     args = {
@@ -109,4 +110,5 @@ if __name__ == "__main__":
         "app_type": 0,
     }
     print client.call("/load/check", args)
-    print client.call("/profile/get_profile", {"friend_id": int(sys.argv[1])})
+    pprint.pprint(client.call("/load/index", args))
+    pprint.pprint(client.call("/profile/get_profile", {"friend_id": int(sys.argv[1])}))
