@@ -52,6 +52,7 @@ class ApiClient(object):
 
     def call(self, path, args):
         vid_iv = "%032d" % random.randrange(10**32)
+        args["timezone"] = "09:00:00"
         args["viewer_id"] = vid_iv + base64.b64encode(
             encrypt_cbc(str(self.viewer_id), vid_iv,
                         VIEWER_ID_KEY))
