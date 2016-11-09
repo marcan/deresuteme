@@ -51,7 +51,7 @@ g_client = apiclient.ApiClient(account.user_id, account.viewer_id, account.udid)
 g_lock = threading.Lock()
 g_last_fetch = 0
 g_last_check = 0
-g_resmgr = None
+g_resmgr = resource_mgr.ResourceManager(g_client.res_ver, RESOURCES_DIR, app.logger)
 
 class RequestFormatter(logging.Formatter):
     def format(self, record):
