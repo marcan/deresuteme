@@ -41,8 +41,12 @@ class ResourceManager(object):
     def _makedirs(self, path):
         dir, name = os.path.split(path)
         if not os.path.exists(dir):
-            os.makedirs(dir)
-    
+            try:
+                os.makedirs(dir)
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+
     def _writefile(self, dest, data):
         self._makedirs(dest)
         tmp = dest + ".%08x" % random.randrange(2**64)
