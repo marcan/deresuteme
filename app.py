@@ -203,6 +203,8 @@ def expand_banner(src, dst):
     os.utime(dst, (mtime, mtime))
 
 def get_data(user_id, max_age=DEF_MAX_AGE):
+    if user_id < 100000000:
+        raise APIError(1457)
     jsonf, age = get_cache(INFO_CACHE_DIR, "%d.json" % user_id,
                            lambda f: load_info(user_id, f), max_age=max_age)
     mtime = os.stat(jsonf).st_mtime
