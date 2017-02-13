@@ -78,6 +78,8 @@ class ProducerInfo(object):
 
         for i in d["user_live_difficulty_list"]:
             dt = i["difficulty_type"]
+            if dt not in self.DIFFICULTIES:
+                continue
             self.cleared[self.DIFFICULTIES[dt]] = int(i["clear_number"])
             self.full_combo[self.DIFFICULTIES[dt]] = int(i["full_combo_number"])
 
