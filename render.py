@@ -102,9 +102,9 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     set_text("name", data.name)
     set_text("comment", data.comment)
     for k, v in data.cleared.items():
-        set_text("cl_" + k[0], str(v), grp=True)
+        set_text("cl_" + k, str(v), grp=True)
     for k, v in data.full_combo.items():
-        set_text("fc_" + k[0], str(v), grp=True)
+        set_text("fc_" + k, str(v), grp=True)
     set_text("cardlevel", str(data.leader_card["level"]), grp=True)
 
     if data.emblem_ex_value:

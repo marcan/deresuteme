@@ -1,16 +1,18 @@
 {
   "comment": "ミナミ？あ、メンテナンスですね！",
   "cleared": {
-    "pro": 199,
     "debut": 199,
+    "normal": 199,
+    "pro": 199,
     "master": 199,
-    "normal": 199
+    "master_plus": 199
   },
   "full_combo": {
-    "pro": 199,
     "debut": 199,
+    "normal": 199,
+    "pro": 199,
     "master": 199,
-    "normal": 199
+    "master_plus": 199
   },
   "leader_card": {
     "love": 999,
