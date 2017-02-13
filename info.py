@@ -29,7 +29,7 @@ class ProducerInfo(object):
         2: u"normal",
         3: u"pro",
         4: u"master",
-        #5: "master_plus",
+        5: u"master_plus",
     }
     
     
