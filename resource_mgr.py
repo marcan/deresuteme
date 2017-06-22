@@ -61,7 +61,9 @@ class ResourceManager(object):
 
         url = self.URLBASE + path
         self.logger.info("Fetch: %s -> %s", url, dest)
-        response = urllib2.urlopen(url)
+        req = urllib2.Request(url)
+        req.add_header("X-Unity-Version", "5.1.2f1")
+        response = urllib2.urlopen(req)
         data = response.read()
         if md5 is not None:
             if hashlib.md5(data).hexdigest() != md5:
