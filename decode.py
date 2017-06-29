@@ -81,6 +81,7 @@ class Stream(object):
     def __init__(self, d, p=0):
         self.d = d
         self.p = p
+        self.align_off = 0
     def tell(self):
         return self.p
     def seek(self, p):
@@ -91,7 +92,7 @@ class Stream(object):
         self.skip(cnt)
         return self.d[self.p-cnt:self.p]
     def align(self, n):
-        self.p = (self.p + n - 1) & ~(n - 1)
+        self.p = ((self.p - self.align_off + n - 1) & ~(n - 1)) + self.align_off
     def read_str(self):
         s = self.d[self.p:].split("\0")[0]
         self.skip(len(s)+1)
@@ -150,8 +151,16 @@ class Def(object):
 class Asset(object):
     def __init__(self, fd):
         self.s = Stream(fd.read())
+        t = self.s.read_str()
+        if t == "UnityRaw":
+            self.s.seek(0x70)
+            self.s.align_off = 0x70
+        elif t == "UnityFS":
+            self.s.seek(0x6d)
+            self.s.align_off = 0x6d
+        else:
+            raise Exception("Unknown signature: %r" % t)
 
-        self.s.seek(0x70)
         self.off = self.s.tell()
 
         self.table_size, self.data_end, self.file_gen, self.data_offset = struct.unpack(">IIII", self.s.read(16))
