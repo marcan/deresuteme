@@ -23,22 +23,27 @@ def parse_ts(ts):
     dt = tz.localize(datetime.datetime.strptime(ts, "%Y-%m-%d %H:%M:%S"), is_dst=None)
     return int((dt - datetime.datetime(1970, 1, 1, tzinfo=pytz.utc)).total_seconds())
 
-def parse_card(card_info, chara_info):
-    return {
+def parse_card(card_info, chara_list, chara_index):
+    ret = {
         u"love": int(card_info["love"]),
         u"level": int(card_info["level"]),
         u"id": int(card_info["card_id"]),
         u"star_rank": int(card_info["step"]) + 1,
         u"skill_level": int(card_info["skill_level"]),
         u"exp": int(card_info["exp"]),
-        u"character": {
+    }
+    if chara_list and chara_index in chara_list:
+        chara_info = chara_list[chara_index]
+        ret[u"character"] = {
             "id": chara_info["chara_id"],
             "vocal_boost": chara_info["param_1"],
             "dance_boost": chara_info["param_2"],
             "visual_boost": chara_info["param_3"],
             "life_boost": chara_info["param_4"],
         }
-    }
+    else:
+        ret[u"character"] = None
+    return ret
 
 class ProducerInfo(object):
     DIFFICULTIES = {
@@ -82,16 +87,16 @@ class ProducerInfo(object):
             self.emblem_id = 1000001
 
         self.leader_card = parse_card(d["friend_info"]["leader_card_info"],
-                                      d["friend_info"]["user_chara_potential"]["chara_0"])
+                                      d["friend_info"]["user_chara_potential"], "chara_0")
         self.support_cards = {
             "cute":    parse_card(d["friend_info"]["support_card_info"]["1"],
-                                  d["friend_info"]["user_chara_potential"]["chara_1"]),
+                                  d["friend_info"]["user_chara_potential"], "chara_1"),
             "cool":    parse_card(d["friend_info"]["support_card_info"]["2"],
-                                  d["friend_info"]["user_chara_potential"]["chara_2"]),
+                                  d["friend_info"]["user_chara_potential"], "chara_2"),
             "passion": parse_card(d["friend_info"]["support_card_info"]["3"],
-                                  d["friend_info"]["user_chara_potential"]["chara_3"]),
+                                  d["friend_info"]["user_chara_potential"], "chara_3"),
             "all":     parse_card(d["friend_info"]["support_card_info"]["4"],
-                                  d["friend_info"]["user_chara_potential"]["chara_4"]),
+                                  d["friend_info"]["user_chara_potential"], "chara_4"),
         }
 
         self.cleared = {i: 0 for i in self.DIFFICULTIES.values()}
