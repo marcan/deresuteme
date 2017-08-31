@@ -23,6 +23,23 @@ def parse_ts(ts):
     dt = tz.localize(datetime.datetime.strptime(ts, "%Y-%m-%d %H:%M:%S"), is_dst=None)
     return int((dt - datetime.datetime(1970, 1, 1, tzinfo=pytz.utc)).total_seconds())
 
+def parse_card(card_info, chara_info):
+    return {
+        u"love": int(card_info["love"]),
+        u"level": int(card_info["level"]),
+        u"id": int(card_info["card_id"]),
+        u"star_rank": int(card_info["step"]) + 1,
+        u"skill_level": int(card_info["skill_level"]),
+        u"exp": int(card_info["exp"]),
+        u"character": {
+            "id": chara_info["chara_id"],
+            "vocal_boost": chara_info["param_1"],
+            "dance_boost": chara_info["param_2"],
+            "visual_boost": chara_info["param_3"],
+            "life_boost": chara_info["param_4"],
+        }
+    }
+
 class ProducerInfo(object):
     DIFFICULTIES = {
         1: u"debut",
@@ -31,14 +48,14 @@ class ProducerInfo(object):
         4: u"master",
         5: u"master_plus",
     }
-    
-    
+
     def __init__(self, data=None):
         self.emblem_id = 1000001
         self.emblem_ex_value = None
+        self.support_cards = None
         if data is not None:
             self.load_data(data)
-        
+
     @property
     def timestamp_fmt(self):
         dt = datetime.datetime.fromtimestamp(self.timestamp, tz)
@@ -64,15 +81,19 @@ class ProducerInfo(object):
         if self.emblem_id == 0:
             self.emblem_id = 1000001
 
-        self.leader_card = {
-            u"love": int(d["friend_info"]["leader_card_info"]["love"]),
-            u"level": int(d["friend_info"]["leader_card_info"]["level"]),
-            u"id": int(d["friend_info"]["leader_card_info"]["card_id"]),
-            u"star_rank": int(d["friend_info"]["leader_card_info"]["step"]) + 1,
-            u"skill_level": int(d["friend_info"]["leader_card_info"]["skill_level"]),
-            u"exp": int(d["friend_info"]["leader_card_info"]["exp"]),
+        self.leader_card = parse_card(d["friend_info"]["leader_card_info"],
+                                      d["friend_info"]["user_chara_potential"]["chara_0"])
+        self.support_cards = {
+            "cute":    parse_card(d["friend_info"]["support_card_info"]["1"],
+                                  d["friend_info"]["user_chara_potential"]["chara_1"]),
+            "cool":    parse_card(d["friend_info"]["support_card_info"]["2"],
+                                  d["friend_info"]["user_chara_potential"]["chara_2"]),
+            "passion": parse_card(d["friend_info"]["support_card_info"]["3"],
+                                  d["friend_info"]["user_chara_potential"]["chara_3"]),
+            "all":     parse_card(d["friend_info"]["support_card_info"]["4"],
+                                  d["friend_info"]["user_chara_potential"]["chara_4"]),
         }
-        
+
         self.cleared = {i: 0 for i in self.DIFFICULTIES.values()}
         self.full_combo = {i: 0 for i in self.DIFFICULTIES.values()}
 
@@ -86,11 +107,11 @@ class ProducerInfo(object):
     KEYS = ["timestamp", "id", "commu_no", "prp", "album_no", "name", "comment",
             "fan", "level", "rank", "creation_ts", "last_login_ts",
             "leader_card", "cleared", "full_combo", "emblem_id",
-            "emblem_ex_value"]
+            "emblem_ex_value", "support_cards"]
 
     def to_json(self):
         return json.dumps({k: getattr(self, k) for k in self.KEYS})
-    
+
     @staticmethod
     def from_json(j):
         self = ProducerInfo()
