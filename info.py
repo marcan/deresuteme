@@ -35,14 +35,18 @@ def parse_card(card_info, chara_list, chara_index):
     if chara_list and chara_index in chara_list:
         chara_info = chara_list[chara_index]
         ret[u"character"] = {
-            "id": chara_info["chara_id"],
             "vocal_boost": chara_info["param_1"],
             "dance_boost": chara_info["param_2"],
             "visual_boost": chara_info["param_3"],
             "life_boost": chara_info["param_4"],
         }
     else:
-        ret[u"character"] = None
+        ret[u"character"] = {
+            "vocal_boost": 0,
+            "dance_boost": 0,
+            "visual_boost": 0,
+            "life_boost": 0,
+        }
     return ret
 
 class ProducerInfo(object):
