@@ -76,7 +76,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
             e = root.findall('.//svg:g[@id="%s"]/svg:text/svg:tspan'%id, ns)
         else:
             e = root.findall('.//svg:text[@id="%s"]/svg:tspan'%id, ns)
-        assert len(e) != 0
+        #assert len(e) != 0
         for i in e:
             while len(i):
                 del i[0]
