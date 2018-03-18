@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib2, hashlib, sys, os, os.path, struct, lz4, sqlite3, random, logging
+import urllib2, hashlib, sys, os, os.path, struct, lz4, sqlite3, random, logging, errno
 
 def unlz4(path):
     fd = open(path)
