@@ -152,16 +152,27 @@ class Asset(object):
     def __init__(self, fd):
         self.s = Stream(fd.read())
         t = self.s.read_str()
+        stream_ver = struct.unpack(">I", self.s.read(4))[0]
+        self.unity_version = self.s.read_str()
+        self.unity_revision = self.s.read_str()
         if t == "UnityRaw":
-            self.s.seek(0x70)
-            self.s.align_off = 0x70
+            size, hdr_size, count1, count2 = struct.unpack(">IIII", self.s.read(16))
+            self.s.read(count2 * 8)
+            if stream_ver >= 2:
+                self.s.read(4)
+            if stream_ver >= 3:
+                data_hdr_size = struct.unpack(">I", self.s.read(4))[0]
+                hdr_size += data_hdr_size
         elif t == "UnityFS":
-            self.s.seek(0x6d)
-            self.s.align_off = 0x6d
+            size, compression_hdr_size, data_hdr_size, flags = struct.unpack(">QIII", self.s.read(20))
+            hdr_size = self.s.tell()
+            if (flags & 0x80) == 0x00:
+                hdr_size += compression_hdr_size
         else:
-            raise Exception("Unknown signature: %r" % t)
+            raise Exception("Unsupported resource type %r" % t)
 
-        self.off = self.s.tell()
+        self.s.seek(hdr_size)
+        self.off = self.s.align_off = self.s.tell()
 
         self.table_size, self.data_end, self.file_gen, self.data_offset = struct.unpack(">IIII", self.s.read(16))
         self.s.read(4)
@@ -191,11 +202,11 @@ class Asset(object):
         return objs
 
     def decode_attrtab(self):
-        code, ident, attr_cnt, stab_len = struct.unpack("<I16sII", self.s.read(28))
-        #print "%08x %s" % (code, ident.encode("hex"))
+        hdr = self.s.read(28)
+        code, ident, attr_cnt, stab_len = struct.unpack("<I16sII", hdr)
         attrs = self.s.read(attr_cnt*24)
         stab = self.s.read(stab_len)
-        
+
         defs = []
         assert attr_cnt < 1024
         for i in xrange(attr_cnt):
@@ -222,23 +233,23 @@ class Asset(object):
 
 def load_image(fd):
     d = Asset(fd)
-    tex = [i for i in d.objs if "image data" in i]
-    assert len(tex) == 1
-    tex = tex[0]
-    data = tex["image data"]
-    width, height, fmt = tex["m_Width"], tex["m_Height"], tex["m_TextureFormat"]
-    if fmt == 7: # BGR565
-        im = Image.frombytes("RGB", (width, height), data, "raw", "BGR;16")
-    elif fmt == 13: # ABGR4444
-        im = Image.frombytes("RGBA", (width, height), data, "raw", "RGBA;4B")
-        r, g, b, a  = im.split()
-        im = Image.merge("RGBA", (a, b, g, r))
+    texes = [i for i in d.objs if "image data" in i]
+    for tex in texes:
+        data = tex["image data"]
+        width, height, fmt = tex["m_Width"], tex["m_Height"], tex["m_TextureFormat"]
+        if fmt == 7: # BGR565
+            im = Image.frombytes("RGB", (width, height), data, "raw", "BGR;16")
+        elif fmt == 13: # ABGR4444
+            im = Image.frombytes("RGBA", (width, height), data, "raw", "RGBA;4B")
+            r, g, b, a  = im.split()
+            im = Image.merge("RGBA", (a, b, g, r))
+        else:
+            continue
+        im = im.transpose(Image.FLIP_TOP_BOTTOM)
+        return im
     else:
-        raise Exception("Unsupported format %d" % fmt)
-    im = im.transpose(Image.FLIP_TOP_BOTTOM)
-    
-    return im
-    
+        raise Exception("No supported image formats")
+
 if __name__ == "__main__":
     im = load_image(open(sys.argv[1]))
     if len(sys.argv) > 2:
