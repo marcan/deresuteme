@@ -164,10 +164,10 @@ limitations under the License.
                 });
             }
             $("#raw").attr("href", "/" + gameid + "/json");
-            $("#snapshot").attr("href", id_priv + "/snap");
+            $("#snapshot").attr("data-href", id_priv + "/snap");
             $("#dl").attr("href", ref + "?dl");
             $("#huge").attr("href", id_priv + "/huge");
-            $("#tweet").attr("href", id_priv + "/tweet");
+            $("#tweet").attr("data-href", id_priv + "/tweet");
             $("#result").show();
         }
         function loadurl() {
@@ -224,7 +224,7 @@ limitations under the License.
             });
             $("#snapshot,#tweet").click(function(event) {
                 event.preventDefault();
-                $("#pf").attr("action", this.href);
+                $("#pf").attr("action", $(this).attr("data-href"));
                 $("#pf").submit();
             })
             loadurl();
