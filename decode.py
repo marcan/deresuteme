@@ -177,10 +177,10 @@ class Asset(object):
         self.table_size, self.data_end, self.file_gen, self.data_offset = struct.unpack(">IIII", self.s.read(16))
         self.s.read(4)
         self.version = self.s.read_str()
-        self.platform = struct.unpack("<I", self.s.read(4))
+        self.platform = struct.unpack("<I", self.s.read(4))[0]
+        self.class_ids = []
         self.defs = self.decode_defs()
         self.objs = self.decode_data()
-
 
     def decode_defs(self):
         are_defs, count = struct.unpack("<BI", self.s.read(5))
@@ -192,18 +192,28 @@ class Asset(object):
         assert count < 1024
         for i in xrange(count):
             self.s.align(4)
-            pathId, off, size, t1, t2, unk = struct.unpack("<QIIIH2xB", self.s.read(25))
+            if self.file_gen >= 17:
+                dhdr = self.s.read(20)
+                pathId, off, size, type_id = struct.unpack("<QIII", dhdr)
+                class_id = self.class_ids[type_id]
+            else:
+                dhdr = self.s.read(25)
+                pathId, off, size, type_id, class_id, unk = struct.unpack("<QIIIH2xB", dhdr)
             save = self.s.tell()
-            
             self.s.seek(off + self.data_offset + self.off)
-            objs.append(self.defs[t1].read(self.s))
+
+            objs.append(self.defs[class_id].read(self.s))
 
             self.s.seek(save)
         return objs
 
     def decode_attrtab(self):
-        hdr = self.s.read(28)
-        code, ident, attr_cnt, stab_len = struct.unpack("<I16sII", hdr)
+        if self.file_gen >= 17:
+            hdr = self.s.read(31)
+            code, unk, ident, attr_cnt, stab_len = struct.unpack("<I3s16sII", hdr)
+        else:
+            hdr = self.s.read(28)
+            code, ident, attr_cnt, stab_len = struct.unpack("<I16sII", hdr)
         attrs = self.s.read(attr_cnt*24)
         stab = self.s.read(stab_len)
 
@@ -229,6 +239,7 @@ class Asset(object):
             #print "%2x %2x %2x %20s %8x %8x %2d: %s%s" % (a1, a2, a4, type_name, size or -1, flags, idx, "  " * level, name)
 
         assert len(defs) == 1
+        self.class_ids.append(code)
         return code, defs[0]
 
 def load_image(fd):
