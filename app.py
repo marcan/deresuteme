@@ -16,7 +16,7 @@
 # limitations under the License.
 
 import os.path, os, random, threading, time, json, logging, base64, hashlib, StringIO, struct
-from secrets import BLOB_KEY, UA_ID
+from secrets import BLOB_KEY
 from PIL import Image
 from Crypto.Cipher import AES
 
@@ -28,8 +28,6 @@ app = Flask(__name__)
 
 if __name__ == "__main__":
     app.config['DEBUG'] = True
-
-app.config["UA_ID"] = UA_ID
 
 BASE = os.path.dirname(os.path.abspath(__file__)) + "/"
 
