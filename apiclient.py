@@ -33,8 +33,8 @@ def encrypt_cbc(s, iv, key):
     return "".join(out[1:])
 
 class ApiClient(object):
-    BASE = "http://game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10020700"):
+    BASE = "https://apis.game.starlight-stage.jp"
+    def __init__(self, user, viewer_id, udid, res_ver="10031400"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
