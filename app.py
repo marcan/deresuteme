@@ -110,7 +110,7 @@ def do_check():
 
 def new_resources(res_ver):
     global g_client, g_resmgr, g_last_check
-    app.logger.info("Resource update: %s", g_client.res_ver)
+    app.logger.info("Resource update: %s -> %s", g_client.res_ver, res_ver)
     g_client.res_ver = res_ver
     do_check()
     g_resmgr = resource_mgr.ResourceManager(g_client.res_ver, RESOURCES_DIR, app.logger)
@@ -127,7 +127,8 @@ def update_resources():
             if "required_res_ver" in check["data_headers"]:
                 time.sleep(1.1)
                 new_resources(check["data_headers"]["required_res_ver"])
-            g_last_check = time.time()
+            elif check["data_headers"]["result_code"] == 101:
+                g_last_check = time.time()
 
 def load_info(user_id, dst):
     global g_lock, g_client, g_last_fetch, g_last_check, g_resmgr
