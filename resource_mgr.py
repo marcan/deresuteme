@@ -28,7 +28,7 @@ class ResourceError(Exception):
     pass
 
 class ResourceManager(object):
-    URLBASE = "http://storage.game.starlight-stage.jp/"
+    URLBASE = "http://asset-starlight-stage.akamaized.net/"
 
     def __init__(self, res_ver, cache_dir, logger):
         self.res_ver = res_ver
@@ -62,7 +62,7 @@ class ResourceManager(object):
         url = self.URLBASE + path
         self.logger.info("Fetch: %s -> %s", url, dest)
         req = urllib2.Request(url)
-        req.add_header("X-Unity-Version", "5.4.5p1")
+        req.add_header("X-Unity-Version", "2017.4.2f2")
         response = urllib2.urlopen(req)
         data = response.read()
         if md5 is not None:
@@ -103,15 +103,15 @@ class ResourceManager(object):
         md5 = manifest_entry["hash"]
 
         if name.endswith(".unity3d"):
-            path = "dl/resources/%s/AssetBundles/%s/%s" % (self.alvl, self.platform, md5)
+            path = "dl/resources/AssetBundles/%s/%s" % (md5[:2], md5)
         elif name.endswith(".mp4") or name.endswith(".ogg"):
             # FIXME: movie quality (unused thus far?)
-            path = "dl/resources/%s/Movie/%s/%s" % (self.slvl, self.platform, md5)
+            path = "dl/resources/Movie/%s/%s" % (md5[:2], md5)
         elif name.endswith(".acb") or name.endswith(".awb"):
             n_dir, _ = os.path.split(name)
-            path = "dl/resources/%s/Sound/Common/%s/%s" % (self.slvl, n_dir, md5)
+            path = "dl/resources/Sound/Common/%s/%s" % (md5[:2], md5)
         elif name.endswith(".mdb") or name.endswith(".bdb"):
-            path = "dl/resources/Generic/%s" % md5
+            path = "dl/resources/Generic/%s/%s" % (md5[:2], md5)
         else:
             raise ResourceException("Unknown asset type: %s" % name)
         
