@@ -15,26 +15,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import rijndael, base64, msgpack, hashlib, random, urllib2, time
+import base64, msgpack, hashlib, random, urllib2, time
+from Crypto.Cipher import AES
+from Crypto.Util import Padding
+
 from secrets import VIEWER_ID_KEY, SID_KEY
 
 def decrypt_cbc(s, iv, key):
-    p = "".join(rijndael.decrypt(key, "".join(s[i:i+len(iv)]))
-                for i in xrange(0, len(s), len(iv)))
-    return "".join(chr(ord((iv+s)[i]) ^ ord(p[i])) for i in xrange(len(p)))
+    aes = AES.new(key, AES.MODE_CBC, iv)
+    return Padding.unpad(aes.decrypt(s), 16)
 
 def encrypt_cbc(s, iv, key):
-    if len(s) % 32:
-        s += "\x00" * (32 - (len(s) % 32))
-    out = [iv]
-    for i in range(0, len(s), 32):
-        blk = "".join(chr(ord(s[i+j]) ^ ord(out[-1][j])) for j in xrange(32))
-        out.append(rijndael.encrypt(key, blk))
-    return "".join(out[1:])
+    aes = AES.new(key, AES.MODE_CBC, iv)
+    return aes.encrypt(Padding.pad(s, 16))
 
 class ApiClient(object):
     BASE = "https://apis.game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10046470"):
+    def __init__(self, user, viewer_id, udid, res_ver="10051210"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
@@ -51,7 +48,7 @@ class ApiClient(object):
         return "".join(chr(ord(c) - 10) for c in s[6::4][:int(s[:4], 16)])
 
     def call(self, path, args):
-        vid_iv = "%032d" % random.randrange(10**32)
+        vid_iv = "%016d" % random.randrange(10**16)
         args["timezone"] = "09:00:00"
         args["viewer_id"] = vid_iv + base64.b64encode(
             encrypt_cbc(str(self.viewer_id), vid_iv,
@@ -59,24 +56,26 @@ class ApiClient(object):
         plain = base64.b64encode(msgpack.packb(args))
         # I don't even
         key = base64.b64encode("".join("%x" % random.randrange(65536) for i in xrange(32)))[:32]
-        msg_iv = self.udid.replace("-","")
+        msg_iv = self.udid.replace("-","").decode("hex")
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
         sid = self.sid if self.sid else str(self.viewer_id) + self.udid
         headers = {
             "PARAM": hashlib.sha1(self.udid + str(self.viewer_id) + path + plain).hexdigest(),
             "KEYCHAIN": "",
-            "USER_ID": self.lolfuscate(str(self.user)),
+            "USER-ID": self.lolfuscate(str(self.user)),
             "CARRIER": "google",
             "UDID": self.lolfuscate(self.udid),
-            "APP_VER": "9.9.9",
-            "RES_VER": str(self.res_ver),
-            "IP_ADDRESS": "127.0.0.1",
-            "DEVICE_NAME": "Nexus 42",
-            "X-Unity-Version": "5.4.5p1",
+            "APP-VER": "9.9.9",
+            "RES-VER": str(self.res_ver),
+            "IDFA": "",
+            "PROCESSOR-TYPE": "ARMv7 VFPv3 NEON",
+            "IP-ADDRESS": "127.0.0.1",
+            "DEVICE-NAME": "Nexus 42",
+            "X-Unity-Version": "2017.4.2f2",
             "SID": hashlib.md5(sid + SID_KEY).hexdigest(),
-            "GRAPHICS_DEVICE_NAME": "3dfx Voodoo2 (TM)",
-            "DEVICE_ID": hashlib.md5("Totally a real Android").hexdigest(),
-            "PLATFORM_OS_VERSION": "Android OS 13.3.7 / API-42 (XYZZ1Y/74726f6c6c)",
+            "GRAPHICS-DEVICE-NAME": "3dfx Voodoo2 (TM)",
+            "DEVICE-ID": hashlib.md5("Totally a real Android").hexdigest(),
+            "PLATFORM-OS-VERSION": "Android OS 13.3.7 / API-42 (XYZZ1Y/74726f6c6c)",
             "DEVICE": "2",
             "Content-Type": "application/x-www-form-urlencoded", # lies
             "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 13.3.7; Nexus 42 Build/XYZZ1Y)",
