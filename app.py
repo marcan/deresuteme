@@ -354,7 +354,7 @@ def decode_blob(blob):
         abort(400)
     try:
         d = base64.b64decode(blob.encode("utf-8") + "==", "-_")
-        d = AES.new(BLOB_KEY).decrypt(d)
+        d = AES.new(BLOB_KEY, AES.MODE_ECB).decrypt(d)
         ver, user_id, privacy, check = struct.unpack("<BIB6x4s", d)
     except:
         abort(400)
@@ -447,7 +447,7 @@ def make_blob(user_id, privacy):
     if privacy not in (1,2,3):
         abort(404)
     d = struct.pack("<BIB6s4x", 1, user_id, privacy, os.urandom(6))
-    d = AES.new(BLOB_KEY).encrypt(d)
+    d = AES.new(BLOB_KEY, AES.MODE_ECB).encrypt(d)
     return base64.b64encode(d, "-_")[:-2]
 
 @app.route("/<int:user_id>/p<int:privacy>/tweet", methods=['POST'])
