@@ -77,6 +77,18 @@ baseStrings = {
     1006:"Vector4f",
 }
 
+try:
+    import lz4.block
+    lz4_decompress = lz4.block.decompress
+except ImportError:
+    import lz4
+    lz4_decompress = lz4.loads
+
+def unlz4(data, uncomp_size):
+    d = lz4_decompress(struct.pack("<I", uncomp_size) + data)
+    assert len(d) == uncomp_size
+    return d
+
 class Stream(object):
     def __init__(self, d, p=0):
         self.d = d
@@ -86,9 +98,13 @@ class Stream(object):
         return self.p
     def seek(self, p):
         self.p = p
+    def seek_end(self, p):
+        self.p = len(self.d) - p
     def skip(self, off):
         self.p += off
-    def read(self, cnt):
+    def read(self, cnt=None):
+        if cnt is None:
+            cnt = len(self.d) - self.p
         self.skip(cnt)
         return self.d[self.p-cnt:self.p]
     def align(self, n):
@@ -105,7 +121,8 @@ class Def(object):
         "int64": "<q",
         "char": "<1s",
         "bool": "<B",
-        "float": "<f"
+        "float": "<f",
+        "unsigned int": "<I",
     }
     def __init__(self, name, type_name, size, flags, array=False):
         self.children = []
@@ -148,6 +165,65 @@ class Def(object):
     def append(self, d):
         self.children.append(d)
 
+class UnityRaw(object):
+    def __init__(self, s, stream_ver):
+        self.s = s
+        size, hdr_size, count1, count2 = struct.unpack(">IIII", self.s.read(16))
+        ptr = hdr_size
+        self.s.read(count2 * 8)
+        if stream_ver >= 2:
+            self.s.read(4)
+        if stream_ver >= 3:
+            data_hdr_size = struct.unpack(">I", self.s.read(4))[0]
+            ptr += data_hdr_size
+        self.s.seek(ptr)
+        self.data = self.s.read()
+
+class UnityFS(object):
+    def __init__(self, s, stream_ver):
+        self.s = s
+        size, hdr_comp_size, hdr_uncomp_size, flags = struct.unpack(">QIII", self.s.read(20))
+        if (flags & 0x80) == 0x00:
+            ciblock = self.s.read(hdr_comp_size)
+        else:
+            ptr = self.s.tell()
+            self.s.seek_end(hdr_comp_size)
+            ciblock = self.s.read(hdr_comp_size)
+            self.s.seek(ptr)
+
+        comp = flags & 0x3f
+        if comp == 0:
+            pass
+        elif comp in (2, 3):
+            ciblock = unlz4(ciblock, hdr_uncomp_size)
+        else:
+            raise Exception("Unsupported compression format %d" % comp)
+        cidata = Stream(ciblock)
+        guid = cidata.read(16)
+        num_blocks = struct.unpack(">I", cidata.read(4))[0]
+        blocks = []
+        for i in range(num_blocks):
+            busize, bcsize, bflags = struct.unpack(">IIH", cidata.read(10))
+            if busize != bcsize:
+                raise Exception("Compressed blocks not supported yet")
+            blocks.append(self.s.read(busize))
+
+        self.blockdata = b"".join(blocks)
+
+        num_nodes = struct.unpack(">I", cidata.read(4))[0]
+        self.files = []
+        self.files_by_name = {}
+        p = 0
+        for i in range(num_nodes):
+            ofs, size, status = struct.unpack(">QQI", cidata.read(20))
+            name = cidata.read_str()
+            #print(ofs, size, status, name)
+            data = self.blockdata[p+ofs:p+ofs+size]
+            self.files.append((name, data))
+            self.files_by_name[name] = data
+
+        self.name = self.files[0][0]
+
 class Asset(object):
     def __init__(self, fd):
         self.s = Stream(fd.read())
@@ -156,22 +232,17 @@ class Asset(object):
         self.unity_version = self.s.read_str()
         self.unity_revision = self.s.read_str()
         if t == "UnityRaw":
-            size, hdr_size, count1, count2 = struct.unpack(">IIII", self.s.read(16))
-            self.s.read(count2 * 8)
-            if stream_ver >= 2:
-                self.s.read(4)
-            if stream_ver >= 3:
-                data_hdr_size = struct.unpack(">I", self.s.read(4))[0]
-                hdr_size += data_hdr_size
+            ur = UnityRaw(self.s, stream_ver)
+            self.fs = None
+            self.s = Stream(ur.data)
+            #print("UnityRaw")
         elif t == "UnityFS":
-            size, compression_hdr_size, data_hdr_size, flags = struct.unpack(">QIII", self.s.read(20))
-            hdr_size = self.s.tell()
-            if (flags & 0x80) == 0x00:
-                hdr_size += compression_hdr_size
+            self.fs = UnityFS(self.s, stream_ver)
+            self.s = Stream(self.fs.files[0][1])
+            #print("UnityFS")
         else:
             raise Exception("Unsupported resource type %r" % t)
 
-        self.s.seek(hdr_size)
         self.off = self.s.align_off = self.s.tell()
 
         self.table_size, self.data_end, self.file_gen, self.data_offset = struct.unpack(">IIII", self.s.read(16))
@@ -247,6 +318,13 @@ def load_image(fd):
     texes = [i for i in d.objs if "image data" in i]
     for tex in texes:
         data = tex["image data"]
+        if not data and "m_StreamData" in tex and d.fs:
+            sd = tex["m_StreamData"]
+            name = sd["path"].split("/")[-1]
+            data = d.fs.files_by_name[name][sd["offset"]:][:sd["size"]]
+            #print("Streamed")
+        if not data:
+            continue
         width, height, fmt = tex["m_Width"], tex["m_Height"], tex["m_TextureFormat"]
         if fmt == 7: # BGR565
             im = Image.frombytes("RGB", (width, height), data, "raw", "BGR;16")
