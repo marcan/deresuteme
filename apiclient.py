@@ -31,7 +31,7 @@ def encrypt_cbc(s, iv, key):
 
 class ApiClient(object):
     BASE = "https://apis.game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10051210"):
+    def __init__(self, user, viewer_id, udid, res_ver="10054210"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
@@ -60,25 +60,25 @@ class ApiClient(object):
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
         sid = self.sid if self.sid else str(self.viewer_id) + self.udid
         headers = {
+            "APP-VER": "5.0.0",
+            "IP-ADDRESS": "1.2.3.4",
+            "X-Unity-Version": "2017.4.2f2",
+            "DEVICE": "2",
+            "DEVICE-ID": hashlib.md5("Totally a real Android 2").hexdigest(),
+            "GRAPHICS-DEVICE-NAME": "Adreno (TM) 512",
             "PARAM": hashlib.sha1(self.udid + str(self.viewer_id) + path + plain).hexdigest(),
-            "KEYCHAIN": "",
-            "USER-ID": self.lolfuscate(str(self.user)),
-            "CARRIER": "google",
+            "PLATFORM-OS-VERSION": "Android OS 8.1.0 / API-27 (OPM7.181005.003/0000000000)",
             "UDID": self.lolfuscate(self.udid),
-            "APP-VER": "9.9.9",
+            "CARRIER": "google",
+            "SID": hashlib.md5(sid + SID_KEY).hexdigest(),
             "RES-VER": str(self.res_ver),
             "IDFA": "",
+            "KEYCHAIN": "",
             "PROCESSOR-TYPE": "ARMv7 VFPv3 NEON",
-            "IP-ADDRESS": "127.0.0.1",
-            "DEVICE-NAME": "Nexus 42",
-            "X-Unity-Version": "2017.4.2f2",
-            "SID": hashlib.md5(sid + SID_KEY).hexdigest(),
-            "GRAPHICS-DEVICE-NAME": "3dfx Voodoo2 (TM)",
-            "DEVICE-ID": hashlib.md5("Totally a real Android").hexdigest(),
-            "PLATFORM-OS-VERSION": "Android OS 13.3.7 / API-42 (XYZZ1Y/74726f6c6c)",
-            "DEVICE": "2",
+            "USER-ID": self.lolfuscate(str(self.user)),
+            "DEVICE-NAME": "Nexus 4",
             "Content-Type": "application/x-www-form-urlencoded", # lies
-            "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 13.3.7; Nexus 42 Build/XYZZ1Y)",
+            "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Nexus 4 Build/XYZZ1Y)",
         }
         for i in range(3):
             try:
@@ -104,9 +104,11 @@ if __name__ == "__main__":
     client = ApiClient(user_id, viewer_id, udid)
     args = {
         "campaign_data": "",
-        "campaign_user": 1337,
-        "campaign_sign": hashlib.md5("All your APIs are belong to us").hexdigest(),
+        "campaign_user": 144234,
+        "campaign_sign": hashlib.md5("All your APIs are belong to us 2").hexdigest(),
         "app_type": 0,
+        "cl_log_params": {'udid': '', 'userId': '', 'viewerId': 0},
+        'error_text': '',
     }
     print client.call("/load/check", args)
     pprint.pprint(client.call("/load/index", args))
