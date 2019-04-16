@@ -15,12 +15,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib2, hashlib, sys, os, os.path, struct, lz4, sqlite3, random, logging, errno
+import urllib2, hashlib, sys, os, os.path, struct, sqlite3, random, logging, errno
+
+try:
+    import lz4.block
+    lz4_decompress = lz4.block.decompress
+except ImportError:
+    import lz4
+    lz4_decompress = lz4.loads
 
 def unlz4(path):
     fd = open(path)
     magic, uncomp, comp, unk = struct.unpack("<IIII", fd.read(16))
-    d = lz4.loads(struct.pack("<I", uncomp) + fd.read())
+    d = lz4_decompress(struct.pack("<I", uncomp) + fd.read())
     assert len(d) == uncomp
     return d
 
