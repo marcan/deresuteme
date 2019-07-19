@@ -31,7 +31,7 @@ def encrypt_cbc(s, iv, key):
 
 class ApiClient(object):
     BASE = "https://apis.game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10054210"):
+    def __init__(self, user, viewer_id, udid, res_ver="10058400"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
@@ -60,7 +60,7 @@ class ApiClient(object):
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
         sid = self.sid if self.sid else str(self.viewer_id) + self.udid
         headers = {
-            "APP-VER": "5.0.0",
+            "APP-VER": "7.0.0",
             "IP-ADDRESS": "1.2.3.4",
             "X-Unity-Version": "2017.4.2f2",
             "DEVICE": "2",
