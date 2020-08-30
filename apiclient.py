@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import base64, msgpack, hashlib, random, urllib2, time
+import base64, msgpack, hashlib, random, urllib.request, urllib.error, urllib.parse, time, json
 from Crypto.Cipher import AES
 from Crypto.Util import Padding
 
@@ -29,9 +29,16 @@ def encrypt_cbc(s, iv, key):
     aes = AES.new(key, AES.MODE_CBC, iv)
     return aes.encrypt(Padding.pad(s, 16))
 
+def deep_decode(data):
+    if isinstance(data, bytes):      return data.decode("utf-8")
+    if isinstance(data, dict):       return dict(map(deep_decode, data.items()))
+    if isinstance(data, tuple):      return tuple(map(deep_decode, data))
+    if isinstance(data, list):       return list(map(deep_decode, data))
+    return data
+
 class ApiClient(object):
     BASE = "https://apis.game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10058400"):
+    def __init__(self, user, viewer_id, udid, res_ver="10074500"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
@@ -51,22 +58,23 @@ class ApiClient(object):
         vid_iv = "%016d" % random.randrange(10**16)
         args["timezone"] = "09:00:00"
         args["viewer_id"] = vid_iv + base64.b64encode(
-            encrypt_cbc(str(self.viewer_id), vid_iv,
-                        VIEWER_ID_KEY))
+            encrypt_cbc(str(self.viewer_id).encode("ascii"),
+                        vid_iv.encode("ascii"),
+                        VIEWER_ID_KEY)).decode("ascii")
         plain = base64.b64encode(msgpack.packb(args))
         # I don't even
-        key = base64.b64encode("".join("%x" % random.randrange(65536) for i in xrange(32)))[:32]
-        msg_iv = self.udid.replace("-","").decode("hex")
+        key = base64.b64encode(b"".join(b"%x" % random.randrange(65536) for i in range(32)))[:32]
+        msg_iv = bytes.fromhex(self.udid.replace("-",""))
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
-        sid = self.sid if self.sid else str(self.viewer_id) + self.udid
+        sid = self.sid if self.sid else (str(self.viewer_id) + self.udid).encode("ascii")
         headers = {
             "APP-VER": "7.0.0",
             "IP-ADDRESS": "1.2.3.4",
             "X-Unity-Version": "2017.4.2f2",
             "DEVICE": "2",
-            "DEVICE-ID": hashlib.md5("Totally a real Android 2").hexdigest(),
+            "DEVICE-ID": hashlib.md5(b"Totally a real Android 2").hexdigest(),
             "GRAPHICS-DEVICE-NAME": "Adreno (TM) 512",
-            "PARAM": hashlib.sha1(self.udid + str(self.viewer_id) + path + plain).hexdigest(),
+            "PARAM": hashlib.sha1((self.udid + str(self.viewer_id) + path + plain.decode("ascii")).encode("ascii")  ).hexdigest(),
             "PLATFORM-OS-VERSION": "Android OS 8.1.0 / API-27 (OPM7.181005.003/0000000000)",
             "UDID": self.lolfuscate(self.udid),
             "CARRIER": "google",
@@ -82,21 +90,21 @@ class ApiClient(object):
         }
         for i in range(3):
             try:
-                req = urllib2.Request(self.BASE + path, body, headers)
-                reply = urllib2.urlopen(req).read()
-            except urllib2.URLError as e:
+                req = urllib.request.Request(self.BASE + path, body, headers)
+                reply = urllib.request.urlopen(req).read()
+            except urllib.error.URLError as e:
                 if i >= 2:
                     raise
                 else:
                     continue
         reply = base64.b64decode(reply)
-        plain = decrypt_cbc(reply[:-32], msg_iv, reply[-32:]).split("\0")[0]
+        plain = decrypt_cbc(reply[:-32], msg_iv, reply[-32:]).split(b"\0")[0]
         msg = msgpack.unpackb(base64.b64decode(plain))
         try:
-            self.sid = msg["data_headers"]["sid"]
+            self.sid = msg[b"data_headers"][b"sid"]
         except:
             pass
-        return msg
+        return deep_decode(msg)
 
 if __name__ == "__main__":
     import sys, pprint
@@ -105,11 +113,11 @@ if __name__ == "__main__":
     args = {
         "campaign_data": "",
         "campaign_user": 144234,
-        "campaign_sign": hashlib.md5("All your APIs are belong to us 2").hexdigest(),
+        "campaign_sign": hashlib.md5(b"All your APIs are belong to us 2").hexdigest(),
         "app_type": 0,
         "cl_log_params": {'udid': '', 'userId': '', 'viewerId': 0},
         'error_text': '',
     }
-    print client.call("/load/check", args)
+    print(client.call("/load/check", args))
     pprint.pprint(client.call("/load/index", args))
     pprint.pprint(client.call("/profile/get_profile", {"friend_id": int(sys.argv[1])}))

@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os.path, os, random, threading, time, json, logging, base64, hashlib, StringIO, struct
+import os.path, os, random, threading, time, json, logging, base64, hashlib, io, struct
 from secrets import BLOB_KEY
 from PIL import Image
 from Crypto.Cipher import AES
@@ -177,7 +177,7 @@ def resize_banner(src, dst, size_div):
     mtime = os.stat(src).st_mtime
     im = Image.open(src)
     w, h = im.size
-    im = im.resize((w/size_div, h/size_div), Image.BICUBIC)
+    im = im.resize((w//size_div, h//size_div), Image.BICUBIC)
     im.save(dst, "PNG")
     os.utime(dst, (mtime, mtime))
 
@@ -197,7 +197,7 @@ def expand_banner(src, dst):
     #new_im = Image.new('RGBA', (w, new_h), (0, 0, 0, 0))
     new_im = Image.open(BASE + 'twitter_bg.png')
     new_w, new_h = new_im.size
-    new_im.paste(im, ((new_w - w) / 2, (new_h - h) / 2), im)
+    new_im.paste(im, ((new_w - w) // 2, (new_h - h) // 2), im)
     new_im.save(dst, "PNG")
     os.utime(dst, (mtime, mtime))
 
@@ -223,9 +223,9 @@ def privatize(data, privacy):
         data.last_login_ts = None
         data.creation_ts = None
     if privacy >= 2:
-        data.name = len(data.name) * u"◯"
+        data.name = len(data.name) * "◯"
     if privacy >= 3:
-        data.comment = min(16,len(data.comment)) * u"◯"
+        data.comment = min(16,len(data.comment)) * "◯"
 
 def get_sized_banner(key, data, mtime, size_div, max_age=DEF_MAX_AGE):
     master, age = get_cache(BANNER_CACHE_DIR, "%s.png" % key,
@@ -305,7 +305,7 @@ def load_snap(snap):
     if len(str(snap)) != 16:
         abort(404)
     try:
-        base64.b64decode(snap, "-_")
+        base64.b64decode(snap.encode("ascii"), b"-_")
     except:
         abort(404)
 
@@ -331,10 +331,10 @@ def try_make_snap(user_id, privacy, tweet=False):
     try:
         data, mtime = get_data(user_id, max_age=60)
         privatize(data, privacy)
-        d = data.to_json()
-        h = base64.b64encode(hashlib.sha1(d).digest()[:12], "-_")
+        d = data.to_json().encode("ascii")
+        h = base64.b64encode(hashlib.sha1(d).digest()[:12], b"-_").decode("ascii")
         def save_json(path):
-            with open(path, "w") as fd:
+            with open(path, "wb") as fd:
                 fd.write(d)
         get_cache(SNAPSHOT_DIR, "%s.json" % h, save_json)
         if tweet:
@@ -489,7 +489,7 @@ def get_resource(resource):
         abort(404)
 
     im = decode.load_image(open(res))
-    fd = StringIO.StringIO()
+    fd = io.BytesIO()
     im.save(fd, format="PNG")
     rs = make_response(fd.getvalue())
     rs.headers['Content-Type'] = 'image/png'

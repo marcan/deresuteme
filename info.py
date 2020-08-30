@@ -25,23 +25,23 @@ def parse_ts(ts):
 
 def parse_card(card_info, chara_list, chara_index):
     ret = {
-        u"love": int(card_info["love"]),
-        u"level": int(card_info["level"]),
-        u"id": int(card_info["card_id"]),
-        u"star_rank": int(card_info["step"]) + 1,
-        u"skill_level": int(card_info["skill_level"]),
-        u"exp": int(card_info["exp"]),
+        "love": int(card_info["love"]),
+        "level": int(card_info["level"]),
+        "id": int(card_info["card_id"]),
+        "star_rank": int(card_info["step"]) + 1,
+        "skill_level": int(card_info["skill_level"]),
+        "exp": int(card_info["exp"]),
     }
     if chara_list and chara_index in chara_list:
         chara_info = chara_list[chara_index]
-        ret[u"potential"] = {
+        ret["potential"] = {
             "vocal": chara_info["param_1"],
             "dance": chara_info["param_2"],
             "visual": chara_info["param_3"],
             "life": chara_info["param_4"],
         }
     else:
-        ret[u"potential"] = {
+        ret["potential"] = {
             "vocal": 0,
             "dance": 0,
             "visual": 0,
@@ -51,13 +51,13 @@ def parse_card(card_info, chara_list, chara_index):
 
 class ProducerInfo(object):
     DIFFICULTIES = {
-        1: u"debut",
-        2: u"normal",
-        3: u"pro",
-        4: u"master",
-        5: u"master_plus",
-        11: u"light",
-        12: u"trick",
+        1: "debut",
+        2: "normal",
+        3: "pro",
+        4: "master",
+        5: "master_plus",
+        11: "light",
+        12: "trick",
     }
 
     def __init__(self, data=None):
@@ -70,8 +70,7 @@ class ProducerInfo(object):
     @property
     def timestamp_fmt(self):
         dt = datetime.datetime.fromtimestamp(self.timestamp, tz)
-        x = dt.strftime(u"%Y年%m月%d日 %H:%M:%S".encode("utf-8"))
-        return x.decode("utf-8")
+        return dt.strftime("%Y年%m月%d日 %H:%M:%S")
 
     def load_data(self, data):
         self.timestamp = int(data["data_headers"]["servertime"])
@@ -105,8 +104,8 @@ class ProducerInfo(object):
                                   d["friend_info"]["user_chara_potential"], "chara_4"),
         }
 
-        self.cleared = {i: 0 for i in self.DIFFICULTIES.values()}
-        self.full_combo = {i: 0 for i in self.DIFFICULTIES.values()}
+        self.cleared = {i: 0 for i in list(self.DIFFICULTIES.values())}
+        self.full_combo = {i: 0 for i in list(self.DIFFICULTIES.values())}
 
         for i in d["user_live_difficulty_list"]:
             dt = i["difficulty_type"]
@@ -138,14 +137,14 @@ if __name__ == "__main__":
     import sys, pickle
 
     d = json.load(open(sys.argv[1]))
-    print "raw:"
-    print d
+    print("raw:")
+    print(d)
     
     p1 = ProducerInfo(d)
-    print
-    print "to_json:"
+    print()
+    print("to_json:")
     j = p1.to_json()
-    print j
+    print(j)
     p2 = ProducerInfo.from_json(j)
     
     assert p1.__dict__ == p2.__dict__

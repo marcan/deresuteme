@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import cairo, gi, base64, datetime, pytz, time, urllib, decode, StringIO, PIL
+import cairo, gi, base64, datetime, pytz, time, urllib.request, urllib.parse, urllib.error, decode, io, PIL
 from PIL import Image
 gi.require_version('Rsvg', '2.0')
 from gi.repository import Rsvg
@@ -31,13 +31,13 @@ ET.register_namespace('xlink', "http://www.w3.org/1999/xlink")
 
 def get_card(cardid, mgr, f):
     path = mgr.get("card_%d_m.unity3d" % cardid)
-    im = decode.load_image(open(path))
+    im = decode.load_image(open(path, "rb"))
     w, h = im.size
     im.save(f, format="PNG", compress_level=0)
 
 def get_emblem(emblemid, mgr, f):
     path = mgr.get("emblem_%07d_l.unity3d" % emblemid)
-    im = decode.load_image(open(path))
+    im = decode.load_image(open(path, "rb"))
     im.save(f, format="PNG", compress_level=0)
 
 def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
@@ -46,30 +46,30 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     width, height = int(root.attrib["width"]), int(root.attrib["height"])
 
     if data.leader_card["id"] == -2:
-        card_icon = open(base + "chihiro2x.png", "r").read()
+        card_icon = open(base + "chihiro2x.png", "rb").read()
     else:
         if card_cache is None:
-            output = StringIO.StringIO()
+            output = io.BytesIO()
             get_card(data.leader_card["id"], res_mgr, output)
             card_icon = output.getvalue()
         else:
             card_file = card_cache(data.leader_card["id"],
                                    lambda f: get_card(data.leader_card["id"],
                                                       res_mgr, f))
-            card_icon = open(card_file).read()
+            card_icon = open(card_file, "rb").read()
 
     if emblem_cache is None:
-        output = StringIO.StringIO()
+        output = io.BytesIO()
         get_emblem(data.emblem_id, res_mgr, output)
         emblem_icon = output.getvalue()
     else:
         emblem_file = emblem_cache(data.emblem_id,
                                 lambda f: get_emblem(data.emblem_id,
                                                     res_mgr, f))
-        emblem_icon = open(emblem_file).read()
+        emblem_icon = open(emblem_file, "rb").read()
 
-    icon_uri = "data:image/png;base64," + base64.b64encode(card_icon)
-    emblem_uri = "data:image/png;base64," + base64.b64encode(emblem_icon)
+    icon_uri = "data:image/png;base64," + base64.b64encode(card_icon).decode("ascii")
+    emblem_uri = "data:image/png;base64," + base64.b64encode(emblem_icon).decode("ascii")
 
     def set_text(id, val, grp=False):
         if grp:
@@ -90,20 +90,20 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     set_text("level", str(data.level))
     set_text("prp", str(data.prp))
     if data.fan >= 10000:
-        set_text("fan", u"%d万人" % (data.fan // 10000))
+        set_text("fan", "%d万人" % (data.fan // 10000))
     else:
-        set_text("fan", u"%d人" % data.fan)
+        set_text("fan", "%d人" % data.fan)
     if data.id is None:
         root.find('.//svg:g[@id="gameid_grp"]', ns).clear()
     elif data.id == -2:
-        set_text("gameid", u"エラー")
+        set_text("gameid", "エラー")
     else:
         set_text("gameid", str(data.id))
     set_text("name", data.name)
     set_text("comment", data.comment)
-    for k, v in data.cleared.items():
+    for k, v in list(data.cleared.items()):
         set_text("cl_" + k, str(v), grp=True)
-    for k, v in data.full_combo.items():
+    for k, v in list(data.full_combo.items()):
         set_text("fc_" + k, str(v), grp=True)
     set_text("cardlevel", str(data.leader_card["level"]), grp=True)
 
@@ -122,7 +122,7 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     ctx.scale(2,2)
     handle.render_cairo(ctx)
     im = Image.frombuffer("RGBA", (2*width, 2*height),
-                          img.get_data(), "raw", "BGRA", 0, 1)
+                          bytes(img.get_data()), "raw", "BGRA", 0, 1)
     return im
 
 if __name__ == "__main__":
@@ -131,22 +131,22 @@ if __name__ == "__main__":
 
     logging.basicConfig()
     log = logging.getLogger("resource")
-    mgr = resource_mgr.ResourceManager(10013700, "./resources/", log)
+    mgr = resource_mgr.ResourceManager(10074500, "./resources/", log)
 
     def scale(im, fac):
         w, h = im.size
         if fac == 1:
             return im
         elif fac > 1:
-            return im.resize((w/fac, h/fac), Image.BICUBIC)
+            return im.resize((w//fac, h//fac), Image.BICUBIC)
         elif fac == -1:
             return im.crop((0, 0, h, h))
         elif fac == -2:
-            im = im.resize((w/2, h/2), Image.BICUBIC)
+            im = im.resize((w//2, h//2), Image.BICUBIC)
             w, h = im.size
             new_im = Image.open('twitter_bg.png')
             new_w, new_h = new_im.size
-            new_im.paste(im, ((new_w - w) / 2, (new_h - h) / 2), im)
+            new_im.paste(im, ((new_w - w) // 2, (new_h - h) // 2), im)
             return new_im
         
     data_err = ProducerInfo.from_json(open("error.json").read())

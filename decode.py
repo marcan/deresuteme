@@ -19,62 +19,62 @@ from PIL import Image
 import struct, sys
 
 baseStrings = {
-    0:"AABB",
-    5:"AnimationClip",
-    19:"AnimationCurve",
-    49:"Array",
-    55:"Base",
-    60:"BitField",
-    76:"bool",
-    81:"char",
-    86:"ColorRGBA",
-    106:"data",
-    138:"FastPropertyName",
-    155:"first",
-    161:"float",
-    167:"Font",
-    172:"GameObject",
-    183:"Generic Mono",
-    208:"GUID",
-    222:"int",
-    241:"map",
-    245:"Matrix4x4f",
-    262:"NavMeshSettings",
-    263:"MonoBehaviour",
-    277:"MonoScript",
-    299:"m_Curve",
-    349:"m_Enabled",
-    374:"m_GameObject",
-    427:"m_Name",
-    490:"m_Script",
-    519:"m_Type",
-    526:"m_Version",
-    543:"pair",
-    548:"PPtr<Component>",
-    564:"PPtr<GameObject>",
-    581:"PPtr<Material>",
-    616:"PPtr<MonoScript>",
-    633:"PPtr<Object>",
-    688:"PPtr<Texture>",
-    702:"PPtr<Texture2D>",
-    718:"PPtr<Transform>",
-    741:"Quaternionf",
-    753:"Rectf",
-    778:"second",
-    795:"size",
-    800:"SInt16",
-    814:"int64",
-    840:"string",
-    874:"Texture2D",
-    884:"Transform",
-    894:"TypelessData",
-    907:"UInt16",
-    928:"UInt8",
-    934:"unsigned int",
-    981:"vector",
-    988:"Vector2f",
-    997:"Vector3f",
-    1006:"Vector4f",
+    0:b"AABB",
+    5:b"AnimationClip",
+    19:b"AnimationCurve",
+    49:b"Array",
+    55:b"Base",
+    60:b"BitField",
+    76:b"bool",
+    81:b"char",
+    86:b"ColorRGBA",
+    106:b"data",
+    138:b"FastPropertyName",
+    155:b"first",
+    161:b"float",
+    167:b"Font",
+    172:b"GameObject",
+    183:b"Generic Mono",
+    208:b"GUID",
+    222:b"int",
+    241:b"map",
+    245:b"Matrix4x4f",
+    262:b"NavMeshSettings",
+    263:b"MonoBehaviour",
+    277:b"MonoScript",
+    299:b"m_Curve",
+    349:b"m_Enabled",
+    374:b"m_GameObject",
+    427:b"m_Name",
+    490:b"m_Script",
+    519:b"m_Type",
+    526:b"m_Version",
+    543:b"pair",
+    548:b"PPtr<Component>",
+    564:b"PPtr<GameObject>",
+    581:b"PPtr<Material>",
+    616:b"PPtr<MonoScript>",
+    633:b"PPtr<Object>",
+    688:b"PPtr<Texture>",
+    702:b"PPtr<Texture2D>",
+    718:b"PPtr<Transform>",
+    741:b"Quaternionf",
+    753:b"Rectf",
+    778:b"second",
+    795:b"size",
+    800:b"SInt16",
+    814:b"int64",
+    840:b"string",
+    874:b"Texture2D",
+    884:b"Transform",
+    894:b"TypelessData",
+    907:b"UInt16",
+    928:b"UInt8",
+    934:b"unsigned int",
+    981:b"vector",
+    988:b"Vector2f",
+    997:b"Vector3f",
+    1006:b"Vector4f",
 }
 
 try:
@@ -110,19 +110,19 @@ class Stream(object):
     def align(self, n):
         self.p = ((self.p - self.align_off + n - 1) & ~(n - 1)) + self.align_off
     def read_str(self):
-        s = self.d[self.p:].split("\0")[0]
+        s = self.d[self.p:].split(b"\0")[0]
         self.skip(len(s)+1)
         return s
 
 
 class Def(object):
     TYPEMAP = {
-        "int": "<i",
-        "int64": "<q",
-        "char": "<1s",
-        "bool": "<B",
-        "float": "<f",
-        "unsigned int": "<I",
+        b"int": "<i",
+        b"int64": "<q",
+        b"char": "<1s",
+        b"bool": "<B",
+        b"float": "<f",
+        b"unsigned int": "<I",
     }
     def __init__(self, name, type_name, size, flags, array=False):
         self.children = []
@@ -137,18 +137,18 @@ class Def(object):
             #print "a", self.name
             size = self.children[0].read(s)
             assert size < 10000000
-            if self.children[1].type_name in ("UInt8","char"):
+            if self.children[1].type_name in (b"UInt8",b"char"):
                 #print "s", size
                 return s.read(size)
             else:
-                return [self.children[1].read(s) for i in xrange(size)]
+                return [self.children[1].read(s) for i in range(size)]
         elif self.children:
             #print "o", self.name
             v = {}
             for i in self.children:
                 v[i.name] = i.read(s)
-            if len(v) == 1 and self.type_name == "string":
-                return v["Array"]
+            if len(v) == 1 and self.type_name == b"string":
+                return v[b"Array"]
             return v
         else:
             x = s.tell()
@@ -231,12 +231,12 @@ class Asset(object):
         stream_ver = struct.unpack(">I", self.s.read(4))[0]
         self.unity_version = self.s.read_str()
         self.unity_revision = self.s.read_str()
-        if t == "UnityRaw":
+        if t == b"UnityRaw":
             ur = UnityRaw(self.s, stream_ver)
             self.fs = None
             self.s = Stream(ur.data)
             #print("UnityRaw")
-        elif t == "UnityFS":
+        elif t == b"UnityFS":
             self.fs = UnityFS(self.s, stream_ver)
             self.s = Stream(self.fs.files[0][1])
             #print("UnityFS")
@@ -255,13 +255,13 @@ class Asset(object):
 
     def decode_defs(self):
         are_defs, count = struct.unpack("<BI", self.s.read(5))
-        return dict(self.decode_attrtab() for i in xrange(count))
+        return dict(self.decode_attrtab() for i in range(count))
 
     def decode_data(self):
         count = struct.unpack("<I", self.s.read(4))[0]
         objs = []
         assert count < 1024
-        for i in xrange(count):
+        for i in range(count):
             self.s.align(4)
             if self.file_gen >= 17:
                 dhdr = self.s.read(20)
@@ -290,16 +290,16 @@ class Asset(object):
 
         defs = []
         assert attr_cnt < 1024
-        for i in xrange(attr_cnt):
+        for i in range(attr_cnt):
             a1, a2, level, a4, type_off, name_off, size, idx, flags = struct.unpack("<BBBBIIIII", attrs[i*24:i*24+24])
             if name_off & 0x80000000:
                 name = baseStrings[name_off & 0x7fffffff]
             else:
-                name = stab[name_off:].split("\0")[0]
+                name = stab[name_off:].split(b"\0")[0]
             if type_off & 0x80000000:
                 type_name = baseStrings[type_off & 0x7fffffff]
             else:
-                type_name = stab[type_off:].split("\0")[0]
+                type_name = stab[type_off:].split(b"\0")[0]
             d = defs
             assert level < 16
             for i in range(level):
@@ -315,17 +315,17 @@ class Asset(object):
 
 def load_image(fd):
     d = Asset(fd)
-    texes = [i for i in d.objs if "image data" in i]
+    texes = [i for i in d.objs if b"image data" in i]
     for tex in texes:
-        data = tex["image data"]
-        if not data and "m_StreamData" in tex and d.fs:
-            sd = tex["m_StreamData"]
-            name = sd["path"].split("/")[-1]
-            data = d.fs.files_by_name[name][sd["offset"]:][:sd["size"]]
+        data = tex[b"image data"]
+        if not data and b"m_StreamData" in tex and d.fs:
+            sd = tex[b"m_StreamData"]
+            name = sd[b"path"].split("/")[-1]
+            data = d.fs.files_by_name[name][sd[b"offset"]:][:sd[b"size"]]
             #print("Streamed")
         if not data:
             continue
-        width, height, fmt = tex["m_Width"], tex["m_Height"], tex["m_TextureFormat"]
+        width, height, fmt = tex[b"m_Width"], tex[b"m_Height"], tex[b"m_TextureFormat"]
         if fmt == 7: # BGR565
             im = Image.frombytes("RGB", (width, height), data, "raw", "BGR;16")
         elif fmt == 13: # ABGR4444
@@ -340,7 +340,7 @@ def load_image(fd):
         raise Exception("No supported image formats")
 
 if __name__ == "__main__":
-    im = load_image(open(sys.argv[1]))
+    im = load_image(open(sys.argv[1], "rb"))
     if len(sys.argv) > 2:
         im.save(sys.argv[2])
     else:

@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib2, hashlib, sys, os, os.path, struct, sqlite3, random, logging, errno
+import urllib.request, urllib.error, urllib.parse, hashlib, sys, os, os.path, struct, sqlite3, random, logging, errno
 
 try:
     import lz4.block
@@ -25,7 +25,7 @@ except ImportError:
     lz4_decompress = lz4.loads
 
 def unlz4(path):
-    fd = open(path)
+    fd = open(path, "rb")
     magic, uncomp, comp, unk = struct.unpack("<IIII", fd.read(16))
     d = lz4_decompress(struct.pack("<I", uncomp) + fd.read())
     assert len(d) == uncomp
@@ -57,7 +57,7 @@ class ResourceManager(object):
     def _writefile(self, dest, data):
         self._makedirs(dest)
         tmp = dest + ".%08x" % random.randrange(2**64)
-        with open(tmp, "w") as fd:
+        with open(tmp, "wb") as fd:
             fd.write(data)
         os.rename(tmp, dest)
 
@@ -68,9 +68,9 @@ class ResourceManager(object):
 
         url = self.URLBASE + path
         self.logger.info("Fetch: %s -> %s", url, dest)
-        req = urllib2.Request(url)
+        req = urllib.request.Request(url)
         req.add_header("X-Unity-Version", "2017.4.2f2")
-        response = urllib2.urlopen(req)
+        response = urllib.request.urlopen(req)
         data = response.read()
         if md5 is not None:
             if hashlib.md5(data).hexdigest() != md5:
@@ -93,7 +93,7 @@ class ResourceManager(object):
     def load_manifest(self):
         base = "dl/%s/" % self.res_ver
 
-        for line in open(self.fetch(base + "manifests/all_dbmanifest")):
+        for line in open(self.fetch(base + "manifests/all_dbmanifest"), "r"):
             manifest_name, md5, plat, alvl, slvl = line.replace("\n","").split(",")
             if plat == self.platform and alvl == self.alvl and slvl == self.slvl:
                 break
@@ -148,4 +148,4 @@ class ResourceManager(object):
 if __name__ == "__main__":
     log = logging.getLogger("resource")
     mgr = ResourceManager(sys.argv[1], ".", log)
-    print mgr.get(sys.argv[2])
+    print(mgr.get(sys.argv[2]))
