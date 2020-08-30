@@ -13,7 +13,7 @@
    width="811"
    version="1.1"
    id="svg2"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="banner.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -25,7 +25,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1128"
+     inkscape:window-height="1114"
      id="namedview738"
      showgrid="true"
      inkscape:snap-bbox="true"
@@ -34,13 +34,14 @@
      inkscape:object-nodes="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="1.8199753"
-     inkscape:cx="577.56536"
-     inkscape:cy="85.439678"
+     inkscape:zoom="5.1476675"
+     inkscape:cx="567.49437"
+     inkscape:cy="48.209988"
      inkscape:window-x="1920"
-     inkscape:window-y="0"
+     inkscape:window-y="360"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="gameid_grp"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid4866" />
@@ -2659,24 +2660,22 @@
        transform="translate(9.9817944,-0.08838835)">
       <text
          xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.26219368px;line-height:89.99999762%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.2622px;line-height:0%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
          x="519.46027"
          y="85.632126"
          id="text5974-3"
-         transform="scale(1.003832,0.99618262)"
-         sodipodi:linespacing="89.999998%"><tspan
+         transform="scale(1.003832,0.99618262)"><tspan
            x="519.46027"
            y="85.632126"
            id="tspan5978-6"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">FC</tspan></text>
       <text
          xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.26219368px;line-height:89.99999762%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.2622px;line-height:0%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
          x="519.46027"
          y="85.632126"
          id="text5974-3-3"
-         transform="scale(1.003832,0.99618262)"
-         sodipodi:linespacing="89.999998%"><tspan
+         transform="scale(1.003832,0.99618262)"><tspan
            x="519.46027"
            y="85.632126"
            id="tspan5978-6-1"
@@ -2700,10 +2699,9 @@
        id="text5974-3-0"
        y="85.417274"
        x="481.36002"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.28741169;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.28741169;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.28741;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.28741;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5978-6-2"
          y="85.417274"
          x="481.36002">クリア</tspan></text>
@@ -2711,10 +2709,9 @@
        id="text5974-3-3-8"
        y="85.417274"
        x="481.36002"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.53592646;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.53592646;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP weight=250';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.535926;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.535926;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5978-6-1-2"
          y="85.417274"
          x="481.36002">クリア</tspan></text>
@@ -2742,9 +2739,9 @@
            id="text5974-3-0-9"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-2-8"
              y="85.417274"
              x="481.36002">PLv</tspan></text>
@@ -2752,9 +2749,9 @@
            id="text5974-3-3-8-0"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-1-2-0"
              y="85.417274"
              x="481.36002">PLv</tspan></text>
@@ -2762,7 +2759,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.26943398px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.2694px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="726.96436"
        y="14.789029"
        id="level"
@@ -2770,7 +2767,7 @@
          x="726.96436"
          y="14.789029"
          id="tspan5978-6-1-2-0-2"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.84405136px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">999</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.8441px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">999</tspan></text>
   </g>
   <g
      transform="translate(45.95587,19)"
@@ -2790,19 +2787,19 @@
     </g>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.26943398px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       x="623.76813"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.2694px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       x="621.78229"
        y="14.789029"
        id="gameid"
        transform="scale(1.0071213,0.99292906)"><tspan
-         x="563.15814"
+         x="561.1723"
          y="14.789029"
          id="tspan5978-6-1-2-0-2-3"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.84405136px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">999999999</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.8441px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">999999999</tspan></text>
   </g>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.01161575px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.0116px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      x="298.53195"
      y="34.824265"
      id="name"><tspan
@@ -2818,10 +2815,9 @@
        id="text4885-7-5"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#7c4805;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#7c4805;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#7c4805;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#7c4805;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-9-0">199</tspan></text>
@@ -2829,10 +2825,9 @@
        id="text4885-1-2-4"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7342);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7342);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7342);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7342);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-8-9-0">199</tspan></text>
@@ -2843,26 +2838,24 @@
      id="cl_pro">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#6e2637;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#6e2637;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7-4"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7-4"><tspan
          id="tspan4887-9-4"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#6e2637;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#6e2637;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7505);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7505);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2-9"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2-9"><tspan
          id="tspan4887-8-9-4"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7505);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7505);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <g
      transform="matrix(0.79470535,0,0,0.77794916,-194.63677,5.7149497)"
@@ -2871,26 +2864,24 @@
      inkscape:label="#cl_debut">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#1a73a6;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#1a73a6;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7"><tspan
          id="tspan4887-9"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#1a73a6;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#1a73a6;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7761);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7761);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2"><tspan
          id="tspan4887-8-9"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7761);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7761);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <g
      style="display:inline;opacity:0.98999999"
@@ -2988,10 +2979,9 @@
        id="text4885-7-5-6"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#7c4805;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#7c4805;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#7c4805;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#7c4805;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-9-0-8">199</tspan></text>
@@ -2999,10 +2989,9 @@
        id="text4885-1-2-4-7"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5630);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5630);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5630);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5630);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-8-9-0-9">199</tspan></text>
@@ -3013,26 +3002,24 @@
      id="fc_pro">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#6d2637;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#6d2637;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7-4-9"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7-4-9"><tspan
          id="tspan4887-9-4-9"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#6d2637;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#6d2637;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5598);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5598);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2-9-0"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2-9-0"><tspan
          id="tspan4887-8-9-4-7"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5598);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5598);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <g
      transform="matrix(0.80017606,0,0,0.77794916,-199.85378,37.714948)"
@@ -3041,26 +3028,24 @@
      inkscape:label="#fc_debut">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#1a73a6;stroke-width:5.70353556;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#1a73a6;stroke-width:5.70354;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7-9"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7-9"><tspan
          id="tspan4887-9-03"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#1a73a6;stroke-width:5.70353556;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#1a73a6;stroke-width:5.70354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5662);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient5662);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2-0"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2-0"><tspan
          id="tspan4887-8-9-8"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5662);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient5662);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <image
      sodipodi:absref="/home/marcan/deresute/deresuteme/app/chihiro2x.png"
@@ -3084,32 +3069,32 @@
      id="cardlevel">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4d103c;fill-opacity:1;fill-rule:evenodd;stroke:#4d103c;stroke-width:5.00992584;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4d103c;fill-opacity:1;fill-rule:evenodd;stroke:#4d103c;stroke-width:5.00993;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="957.96399"
        y="85.621346"
        id="text4885-7-4-9-4"><tspan
          id="tspan4887-9-4-9-6"
          x="957.96399"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#4d103c;fill-opacity:1;stroke:#4d103c;stroke-width:5.00992584;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#4d103c;fill-opacity:1;stroke:#4d103c;stroke-width:5.00993;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="957.96399"
        y="85.621346"
        id="text4885-1-2-9-0-1"><tspan
          id="tspan4887-8-9-4-7-8"
          x="957.96399"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99</tspan></text>
   </g>
   <text
      id="lv"
      y="35.079411"
      x="19.824507"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.61681557px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:-1.76999998px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient9434);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.6168px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:-1.77px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient9434);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.61681557px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:-1.76999998px;text-anchor:start;fill:url(#linearGradient9434);fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.6168px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:-1.77px;text-anchor:start;fill:url(#linearGradient9434);fill-opacity:1;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        y="35.079411"
        x="19.824507"
        id="tspan4887-8-83-3-4-2-3-2">Lv</tspan></text>
@@ -3942,9 +3927,9 @@
            id="text5974-3-0-9-2-8"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-2-8-5-5"
              y="85.417274"
              x="481.36002">ファン数</tspan></text>
@@ -3952,9 +3937,9 @@
            id="text5974-3-3-8-0-8-9"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-1-2-0-91-82"
              y="85.417274"
              x="481.36002">ファン数</tspan></text>
@@ -3962,7 +3947,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.26943398px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.2694px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="211.63281"
        y="55.073872"
        id="fan"
@@ -3970,7 +3955,7 @@
          x="211.63281"
          y="55.073872"
          id="tspan5978-6-1-2-0-2-9-9"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.84405136px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99999万人</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.8441px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">99999万人</tspan></text>
   </g>
   <g
      id="rk_sss"
@@ -4113,9 +4098,9 @@
      id="emblem-rank"
      y="33.1721"
      x="242.26471"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.27655792px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.27656px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.07609081px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.0761px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="tspan5978-6-1-2-0-2-9-9-6"
        y="33.1721"
        x="221.90967">9999999</tspan></text>
@@ -4157,10 +4142,9 @@
        id="text4885-7-5-6-9"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#672d04;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#672d04;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#672d04;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#672d04;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-9-0-8-3">199</tspan></text>
@@ -4168,10 +4152,9 @@
        id="text4885-1-2-4-7-7"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7811);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7811);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7811);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7811);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-8-9-0-9-4">199</tspan></text>
@@ -4241,26 +4224,24 @@
      id="fc_master">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#5f2f76;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#5f2f76;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7-0-6"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7-0-6"><tspan
          id="tspan4887-9-3-5"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#5f2f76;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#5f2f76;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4658);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4658);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2-3-0"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2-3-0"><tspan
          id="tspan4887-8-9-6-3"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient4658);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient4658);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <g
      style="display:inline"
@@ -4323,26 +4304,24 @@
      inkscape:label="#cl_master">
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#5f2f76;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f5f2f2;fill-opacity:1;fill-rule:evenodd;stroke:#5f2f76;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-7-0"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-7-0"><tspan
          id="tspan4887-9-3"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#5f2f76;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#f5f2f2;fill-opacity:1;stroke:#5f2f76;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
     <text
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7711);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7711);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="971.0498"
        y="85.621346"
-       id="text4885-1-2-3"
-       sodipodi:linespacing="89.999998%"><tspan
+       id="text4885-1-2-3"><tspan
          id="tspan4887-8-9-6"
          x="971.0498"
          y="85.621346"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7711);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7711);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">199</tspan></text>
   </g>
   <path
      style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -4386,10 +4365,9 @@
        id="text4885-7-5-6-9-7"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#672d04;stroke-width:5.72313309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#672d04;stroke-width:5.72313309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#7c4805;fill-opacity:1;fill-rule:evenodd;stroke:#672d04;stroke-width:5.72313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:#7c4805;fill-opacity:1;stroke:#672d04;stroke-width:5.72313;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-9-0-8-3-7">199</tspan></text>
@@ -4397,10 +4375,9 @@
        id="text4885-1-2-4-7-7-6"
        y="85.621346"
        x="971.0498"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.40749359px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7811-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"
-       sodipodi:linespacing="89.999998%"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7811-0);fill-opacity:1;stroke:none;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4075px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:1px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient7811-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;fill:url(#linearGradient7811-0);fill-opacity:1;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          y="85.621346"
          x="971.0498"
          id="tspan4887-8-9-0-9-4-7">199</tspan></text>
@@ -4419,9 +4396,8 @@
      y="85"
      ry="4" />
   <text
-     sodipodi:linespacing="89.999998%"
      id="comment"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.97500038px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1.15825319px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.975px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:1.15825px;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      xml:space="preserve"
      x="114.95897"
      y="86.270897"
@@ -4448,33 +4424,30 @@
          id="g4451-3-8-6-6"
          transform="matrix(0.87150316,0,0,0.85793842,-52.925625,-19.558305)">
         <text
-           sodipodi:linespacing="89.999998%"
            id="text5974-3-0-9-2-0"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591267;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:#353535;stroke-width:4.62591;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-2-8-5-6"
              y="85.417274"
              x="481.36002">PRP</tspan></text>
         <text
-           sodipodi:linespacing="89.999998%"
            id="text5974-3-3-8-0-8-6"
            y="85.417274"
            x="481.36002"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.50253296px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.5025px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#f3f3f3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
            xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.09724236px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.57823908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.0972px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';letter-spacing:0px;stroke:none;stroke-width:0.578239;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan5978-6-1-2-0-91-8"
              y="85.417274"
              x="481.36002">PRP</tspan></text>
       </g>
     </g>
     <text
-       sodipodi:linespacing="89.999998%"
        xml:space="preserve"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.26943398px;line-height:89.99999762%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.2694px;line-height:0%;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#353535;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        x="407.23862"
        y="55.073887"
        id="prp"
@@ -4482,6 +4455,6 @@
          x="407.23862"
          y="55.073887"
          id="tspan5978-6-1-2-0-2-9-3"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.84405136px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.49999991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">9999</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.8441px;font-family:'FOT-RodinNTLG Pro';-inkscape-font-specification:'FOT-RodinNTLG Pro Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#353535;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">9999</tspan></text>
   </g>
 </svg>
