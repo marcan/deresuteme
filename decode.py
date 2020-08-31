@@ -320,7 +320,7 @@ def load_image(fd):
         data = tex[b"image data"]
         if not data and b"m_StreamData" in tex and d.fs:
             sd = tex[b"m_StreamData"]
-            name = sd[b"path"].split("/")[-1]
+            name = sd[b"path"].split(b"/")[-1]
             data = d.fs.files_by_name[name][sd[b"offset"]:][:sd[b"size"]]
             #print("Streamed")
         if not data:
