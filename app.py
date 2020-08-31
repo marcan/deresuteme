@@ -353,14 +353,14 @@ def decode_blob(blob):
     if len(blob) != 22:
         abort(400)
     try:
-        d = base64.b64decode(blob.encode("utf-8") + "==", "-_")
+        d = base64.b64decode(blob.encode("ascii") + b"==", b"-_")
         d = AES.new(BLOB_KEY, AES.MODE_ECB).decrypt(d)
         ver, user_id, privacy, check = struct.unpack("<BIB6x4s", d)
     except:
         abort(400)
     if ver != 1:
         abort(400)
-    if check != "\x00\x00\x00\x00":
+    if check != b"\x00\x00\x00\x00":
         abort(400)
     if privacy not in (1,2,3):
         abort(400)
@@ -448,7 +448,7 @@ def make_blob(user_id, privacy):
         abort(404)
     d = struct.pack("<BIB6s4x", 1, user_id, privacy, os.urandom(6))
     d = AES.new(BLOB_KEY, AES.MODE_ECB).encrypt(d)
-    return base64.b64encode(d, "-_")[:-2]
+    return base64.b64encode(d, b"-_")[:-2]
 
 @app.route("/<int:user_id>/p<int:privacy>/tweet", methods=['POST'])
 def make_snap_priv_and_tweet(user_id, privacy):
