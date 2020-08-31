@@ -93,7 +93,7 @@ def get_cache(cachedir, name, fetch, max_age=None):
 
 class APIError(Exception):
     def __init__(self, code):
-        Exception.__init__(self, "API error %d" % code)
+        Exception.__init__(self, "API error %d (viewer_id: %d)" % (code, g_client.viewer_id))
         self.code = code
 
 def do_check():
