@@ -125,8 +125,11 @@ def update_resources():
             app.logger.info("Check age is %d, invoking check", check_age)
             check = do_check()
             if "required_res_ver" in check["data_headers"]:
-                time.sleep(1.1)
-                new_resources(check["data_headers"]["required_res_ver"])
+                if check["data_headers"]["required_res_ver"] != g_client.res_ver:
+                    time.sleep(1.1)
+                    new_resources(check["data_headers"]["required_res_ver"])
+                else:
+                    app.logger.info("Spurious resource update, API call probably needs fixing")
             elif check["data_headers"]["result_code"] == 101:
                 g_last_check = time.time()
 
