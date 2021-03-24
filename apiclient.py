@@ -99,7 +99,7 @@ class ApiClient(object):
                     continue
         reply = base64.b64decode(reply)
         plain = decrypt_cbc(reply[:-32], msg_iv, reply[-32:]).split(b"\0")[0]
-        msg = msgpack.unpackb(base64.b64decode(plain))
+        msg = msgpack.unpackb(base64.b64decode(plain), strict_map_key=False)
         try:
             self.sid = msg[b"data_headers"][b"sid"]
         except:
