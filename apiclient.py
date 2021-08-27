@@ -64,11 +64,12 @@ class ApiClient(object):
         plain = base64.b64encode(msgpack.packb(args))
         # I don't even
         key = base64.b64encode(b"".join(b"%x" % random.randrange(65536) for i in range(32)))[:32]
+        print(repr(key))
         msg_iv = bytes.fromhex(self.udid.replace("-",""))
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
         sid = self.sid if self.sid else (str(self.viewer_id) + self.udid).encode("ascii")
         headers = {
-            "APP-VER": "7.0.0",
+            "APP-VER": "9.0.0",
             "IP-ADDRESS": "1.2.3.4",
             "X-Unity-Version": "2017.4.2f2",
             "DEVICE": "2",
