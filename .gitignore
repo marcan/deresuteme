@@ -1,6 +1,6 @@
 *.pyc
 account.py
-secrets.py
+keys.py
 
 data/*/*
 !data/*/.keep

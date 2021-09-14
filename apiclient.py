@@ -19,7 +19,7 @@ import base64, msgpack, hashlib, random, urllib.request, urllib.error, urllib.pa
 from Crypto.Cipher import AES
 from Crypto.Util import Padding
 
-from secrets import VIEWER_ID_KEY, SID_KEY
+from keys import VIEWER_ID_KEY, SID_KEY
 
 def decrypt_cbc(s, iv, key):
     aes = AES.new(key, AES.MODE_CBC, iv)

@@ -16,7 +16,7 @@
 # limitations under the License.
 
 import os.path, os, random, threading, time, json, logging, base64, hashlib, io, struct
-from secrets import BLOB_KEY
+from keys import BLOB_KEY
 from PIL import Image
 from Crypto.Cipher import AES
 
