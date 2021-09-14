@@ -110,7 +110,8 @@ class ApiClient(object):
 if __name__ == "__main__":
     import sys, pprint
     from account import user_id, viewer_id, udid
-    client = ApiClient(user_id, viewer_id, udid)
+    import apiclient
+    client = apiclient.ApiClient(user_id, viewer_id, udid)
     args = {
         "campaign_data": "",
         "campaign_user": 144234,

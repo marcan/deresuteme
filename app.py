@@ -130,7 +130,7 @@ def update_resources():
                     new_resources(check["data_headers"]["required_res_ver"])
                 else:
                     app.logger.info("Spurious resource update, API call probably needs fixing")
-            elif check["data_headers"]["result_code"] == 101:
+            elif check["data_headers"]["result_code"] in (101, 208):
                 g_last_check = time.time()
 
 def load_info(user_id, dst):
@@ -491,7 +491,7 @@ def get_resource(resource):
     except resource_mgr.ResourceError:
         abort(404)
 
-    im = decode.load_image(open(res))
+    im = decode.load_image(open(res, "rb"))
     fd = io.BytesIO()
     im.save(fd, format="PNG")
     rs = make_response(fd.getvalue())
