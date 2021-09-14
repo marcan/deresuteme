@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
     logging.basicConfig()
     log = logging.getLogger("resource")
-    mgr = resource_mgr.ResourceManager(10074500, "./resources/", log)
+    mgr = resource_mgr.ResourceManager(10088500, "./resources/", log)
 
     def scale(im, fac):
         w, h = im.size

@@ -38,7 +38,7 @@ def deep_decode(data):
 
 class ApiClient(object):
     BASE = "https://apis.game.starlight-stage.jp"
-    def __init__(self, user, viewer_id, udid, res_ver="10074500"):
+    def __init__(self, user, viewer_id, udid, res_ver="10088500"):
         self.user = user
         self.viewer_id = viewer_id
         self.udid = udid
