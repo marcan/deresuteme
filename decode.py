@@ -16,6 +16,11 @@
 # limitations under the License.
 
 from PIL import Image
+try:
+    import astc_decomp
+except ImportError:
+    pass
+
 import struct, sys
 
 baseStrings = {
@@ -65,10 +70,13 @@ baseStrings = {
     800:b"SInt16",
     814:b"int64",
     840:b"string",
+    847:b"TextAsset",
     874:b"Texture2D",
     884:b"Transform",
     894:b"TypelessData",
     907:b"UInt16",
+    914:b"UInt32",
+    921:b"UInt64",
     928:b"UInt8",
     934:b"unsigned int",
     981:b"vector",
@@ -85,7 +93,7 @@ except ImportError:
     lz4_decompress = lz4.loads
 
 def unlz4(data, uncomp_size):
-    d = lz4_decompress(struct.pack("<I", uncomp_size) + data)
+    d = lz4_decompress(data, uncomp_size)
     assert len(d) == uncomp_size
     return d
 
@@ -123,6 +131,7 @@ class Def(object):
         b"bool": "<B",
         b"float": "<f",
         b"unsigned int": "<I",
+        b"UInt64": "<Q",
     }
     def __init__(self, name, type_name, size, flags, array=False):
         self.children = []
@@ -134,16 +143,17 @@ class Def(object):
     
     def read(self, s):
         if self.array:
-            #print "a", self.name
+            #print("a", self.name)
             size = self.children[0].read(s)
+            #print("ss", hex(size))
             assert size < 10000000
             if self.children[1].type_name in (b"UInt8",b"char"):
-                #print "s", size
+                #print("s", size)
                 return s.read(size)
             else:
                 return [self.children[1].read(s) for i in range(size)]
         elif self.children:
-            #print "o", self.name
+            #print("o", self.name)
             v = {}
             for i in self.children:
                 v[i.name] = i.read(s)
@@ -156,6 +166,9 @@ class Def(object):
             d = s.read(self.size)
             if self.type_name in self.TYPEMAP:
                 d = struct.unpack(self.TYPEMAP[self.type_name], d)[0]
+                #print("p", self.name, d)
+            #else:
+                #print("p", self.name)
             #print hex(x), self.name, self.type_name, repr(d)
             return d
 
@@ -179,10 +192,22 @@ class UnityRaw(object):
         self.s.seek(ptr)
         self.data = self.s.read()
 
+COMP_TYPES = {
+    0: None,
+    1: "LZMA",
+    2: "LZ4",
+    3: "LZ4HC",
+    4: "LZHAM",
+}
+
 class UnityFS(object):
     def __init__(self, s, stream_ver):
         self.s = s
+        #print("stream_ver:", stream_ver)
         size, hdr_comp_size, hdr_uncomp_size, flags = struct.unpack(">QIII", self.s.read(20))
+        if stream_ver >= 7:
+            self.s.read(15)
+        #print(">", size, hdr_comp_size, hdr_uncomp_size, "0x%x"%flags)
         if (flags & 0x80) == 0x00:
             ciblock = self.s.read(hdr_comp_size)
         else:
@@ -192,6 +217,8 @@ class UnityFS(object):
             self.s.seek(ptr)
 
         comp = flags & 0x3f
+        #print(comp, hdr_comp_size, hdr_uncomp_size)
+        #print(ciblock.hex())
         if comp == 0:
             pass
         elif comp in (2, 3):
@@ -204,9 +231,20 @@ class UnityFS(object):
         blocks = []
         for i in range(num_blocks):
             busize, bcsize, bflags = struct.unpack(">IIH", cidata.read(10))
-            if busize != bcsize:
-                raise Exception("Compressed blocks not supported yet")
-            blocks.append(self.s.read(busize))
+            if stream_ver >= 7:
+                cidata.read(0)
+            #print("blk", busize, bcsize, bflags)
+            blk = self.s.read(bcsize)
+            #print(f"bflags {bflags:#x}")
+            ctype = COMP_TYPES.get(bflags & 0x3f, bflags & 0x3f)
+            #print("CT", ctype)
+            if ctype is None:
+                pass
+            elif ctype in ("LZ4", "LZ4HC"):
+                blk = unlz4(blk, busize)
+            else:
+                raise Exception(f"Compression type {COMP_TYPES.get(bflags, str(bflags))} not supported yet")
+            blocks.append(blk)
 
         self.blockdata = b"".join(blocks)
 
@@ -221,12 +259,14 @@ class UnityFS(object):
             data = self.blockdata[p+ofs:p+ofs+size]
             self.files.append((name, data))
             self.files_by_name[name] = data
+            #open(name,"wb").write(data)
 
         self.name = self.files[0][0]
 
 class Asset(object):
     def __init__(self, fd):
-        self.s = Stream(fd.read())
+        data = fd.read()
+        self.s = Stream(data)
         t = self.s.read_str()
         stream_ver = struct.unpack(">I", self.s.read(4))[0]
         self.unity_version = self.s.read_str()
@@ -246,7 +286,10 @@ class Asset(object):
         self.off = self.s.align_off = self.s.tell()
 
         self.table_size, self.data_end, self.file_gen, self.data_offset = struct.unpack(">IIII", self.s.read(16))
-        self.s.read(4)
+        if self.file_gen >= 22:
+            self.table_size, hdr_size, self.data_offset, unk = struct.unpack(">QQQQ", self.s.read(32))
+        else:
+            self.s.read(4)
         self.version = self.s.read_str()
         self.platform = struct.unpack("<I", self.s.read(4))[0]
         self.class_ids = []
@@ -263,7 +306,11 @@ class Asset(object):
         assert count < 1024
         for i in range(count):
             self.s.align(4)
-            if self.file_gen >= 17:
+            if self.file_gen >= 22:
+                dhdr = self.s.read(24)
+                pathId, off, size, type_id = struct.unpack("<QQII", dhdr)
+                class_id = self.class_ids[type_id]
+            elif self.file_gen >= 17:
                 dhdr = self.s.read(20)
                 pathId, off, size, type_id = struct.unpack("<QIII", dhdr)
                 class_id = self.class_ids[type_id]
@@ -280,41 +327,67 @@ class Asset(object):
 
     def decode_attrtab(self):
         if self.file_gen >= 17:
-            hdr = self.s.read(31)
-            code, unk, ident, attr_cnt, stab_len = struct.unpack("<I3s16sII", hdr)
+            code, unk, idtype = struct.unpack("<IBH", self.s.read(7))
+            if idtype == 0xffff:
+                ident = self.s.read(16)
+            elif idtype == 0:
+                ident = self.s.read(32)
+            else:
+                raise Exception(f"Unknown idtype {idtype:#x}")
+            attr_cnt, stab_len = struct.unpack("<II", self.s.read(8))
+            #print(code, unk, ident, attr_cnt, stab_len)
         else:
             hdr = self.s.read(28)
             code, ident, attr_cnt, stab_len = struct.unpack("<I16sII", hdr)
-        attrs = self.s.read(attr_cnt*24)
+        if self.file_gen >= 21:
+            attrs = self.s.read(attr_cnt*32)
+        else:
+            attrs = self.s.read(attr_cnt*24)
         stab = self.s.read(stab_len)
-
         defs = []
         assert attr_cnt < 1024
         for i in range(attr_cnt):
-            a1, a2, level, a4, type_off, name_off, size, idx, flags = struct.unpack("<BBBBIIIII", attrs[i*24:i*24+24])
+            if self.file_gen >= 21:
+                a1, a2, level, a4, type_off, name_off, size, idx, flags, x, y = struct.unpack("<BBBBIIIIIII", attrs[i*32:i*32+32])
+                #print(a1, a2, level, a4, type_off, name_off, size, idx, flags, x, y)
+            else:
+                a1, a2, level, a4, type_off, name_off, size, idx, flags = struct.unpack("<BBBBIIIII", attrs[i*24:i*24+24])
+                #print(a1, a2, level, a4, type_off, name_off, size, idx, flags)
             if name_off & 0x80000000:
                 name = baseStrings[name_off & 0x7fffffff]
             else:
                 name = stab[name_off:].split(b"\0")[0]
-            if type_off & 0x80000000:
+            if type_off == 0xffffffff:
+                type_name = "unk"
+            elif type_off & 0x80000000:
                 type_name = baseStrings[type_off & 0x7fffffff]
             else:
                 type_name = stab[type_off:].split(b"\0")[0]
             d = defs
             assert level < 16
+            #print(type_name)
             for i in range(level):
+                #print(d)
                 d = d[-1]
             if size == 0xffffffff:
                 size = None
             d.append(Def(name, type_name, size, flags, array=bool(a4)))
-            #print "%2x %2x %2x %20s %8x %8x %2d: %s%s" % (a1, a2, a4, type_name, size or -1, flags, idx, "  " * level, name)
+            #print("%2x %2x %2x %20s %8x %8x %2d: %s%s" % (a1, a2, a4, type_name, size or -1, flags, idx, "  " * level, name))
 
-        assert len(defs) == 1
+        if self.file_gen >= 21:
+            self.s.read(4)
+
+        #assert len(defs) == 1
         self.class_ids.append(code)
         return code, defs[0]
 
-def load_image(fd):
-    d = Asset(fd)
+def is_image(d):
+    return any(b"image data" in i for i in d.objs)
+
+def is_audio(d):
+    return any("acbFiles" in i for i in d.objs)
+
+def decode_image(d):
     texes = [i for i in d.objs if b"image data" in i]
     for tex in texes:
         data = tex[b"image data"]
@@ -332,6 +405,8 @@ def load_image(fd):
             im = Image.frombytes("RGBA", (width, height), data, "raw", "RGBA;4B")
             r, g, b, a  = im.split()
             im = Image.merge("RGBA", (a, b, g, r))
+        elif fmt == 50: # ASTC_RGB_6x6
+            im = Image.frombytes("RGBA", (width, height), data, "astc", (6, 6))
         else:
             continue
         im = im.transpose(Image.FLIP_TOP_BOTTOM)
@@ -339,11 +414,24 @@ def load_image(fd):
     else:
         raise Exception("No supported image formats")
 
+def load_image(fd):
+    a = Asset(fd)
+    return decode_image(a)
+
 if __name__ == "__main__":
-    im = load_image(open(sys.argv[1], "rb"))
-    if len(sys.argv) > 2:
-        im.save(sys.argv[2])
+    a = Asset(open(sys.argv[1], "rb"))
+    if is_image(a):
+        im = decode_image(a)
+        if len(sys.argv) > 2:
+            im.save(sys.argv[2])
+        else:
+            im.show()
     else:
-        im.show()
+        for obj in a.objs:
+            name = obj.get(b"m_Name", None)
+            data = obj.get(b"m_Script", None)
+            if name and data and isinstance(data, bytes):
+                print(name)
+                open(name,"wb").write(data)
 
 
