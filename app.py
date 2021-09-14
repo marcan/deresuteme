@@ -241,12 +241,12 @@ def get_sized_banner(key, data, mtime, size_div, max_age=DEF_MAX_AGE):
 
     if size_div == 1:
         return send_file(master, mimetype="image/png",
-                         cache_timeout=cache_timeout)
+                         max_age=cache_timeout)
     elif size_div == -1:
         sized, age = get_cache(BANNER_CACHE_DIR, "%s_sq.png" % key,
                             lambda f: crop_banner(master, f),
                             max_age=max_age)
-        return send_file(sized, mimetype="image/png", cache_timeout=cache_timeout)
+        return send_file(sized, mimetype="image/png", max_age=cache_timeout)
     elif size_div == -2:
         sized, age = get_cache(BANNER_CACHE_DIR, "%s_s%d.png" % (key, 2),
                             lambda f: resize_banner(master, f, 2),
@@ -255,12 +255,12 @@ def get_sized_banner(key, data, mtime, size_div, max_age=DEF_MAX_AGE):
         sized, age = get_cache(BANNER_CACHE_DIR, "%s_tw.png" % key,
                             lambda f: expand_banner(sized, f),
                             max_age=max_age)
-        return send_file(sized, mimetype="image/png", cache_timeout=cache_timeout)
+        return send_file(sized, mimetype="image/png", max_age=cache_timeout)
 
     sized, age = get_cache(BANNER_CACHE_DIR, "%s_s%d.png" % (key, size_div),
                            lambda f: resize_banner(master, f, size_div),
                            max_age=max_age)
-    return send_file(sized, mimetype="image/png", cache_timeout=cache_timeout)
+    return send_file(sized, mimetype="image/png", max_age=cache_timeout)
 
 sizemap = {
     "square": -1,
@@ -290,15 +290,15 @@ def try_get_banner(user_id, sizename, privacy=0):
         return res
     except APIError as e:
         if e.code == 1457:
-            return send_file("static/error_404_%d.png" % size, mimetype="image/png", cache_timeout=60)
+            return send_file("static/error_404_%d.png" % size, mimetype="image/png", max_age=60)
         elif e.code == 101:
-            return send_file("static/error_503_%d.png" % size, mimetype="image/png", cache_timeout=60)
+            return send_file("static/error_503_%d.png" % size, mimetype="image/png", max_age=60)
         else:
             app.logger.exception("API error for %r/%r/%r" % (user_id, sizename, privacy))
-            return send_file("static/error_%d.png" % size, mimetype="image/png", cache_timeout=60)
+            return send_file("static/error_%d.png" % size, mimetype="image/png", max_age=60)
     except Exception as e:
         app.logger.exception("Exception thrown for %r/%r/%r" % (user_id, sizename, privacy))
-        return send_file("static/error_%d.png" % size, mimetype="image/png", cache_timeout=60)
+        return send_file("static/error_%d.png" % size, mimetype="image/png", max_age=60)
 
 def load_snap(snap):
     try:
