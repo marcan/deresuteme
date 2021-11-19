@@ -32,6 +32,10 @@ def parse_card(card_info, chara_list, chara_index):
         "skill_level": int(card_info["skill_level"]),
         "exp": int(card_info["exp"]),
     }
+    if "custom_info" in card_info:
+        ret["image_id"] = card_info["custom_info"]["image_card_id"]
+    else:
+        ret["image_id"] = ret["id"]
     if chara_list and chara_index in chara_list:
         chara_info = chara_list[chara_index]
         ret["potential"] = {

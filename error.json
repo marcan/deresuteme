@@ -20,7 +20,8 @@
     "exp": 999999,
     "skill_level": 99,
     "star_rank": 99,
-    "id": -2
+    "id": -2,
+    "image_id": -2
   },
   "name": "ちひろ",
   "level": 999,

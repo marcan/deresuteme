@@ -45,16 +45,16 @@ def render_banner(data, res_mgr, card_cache=None, emblem_cache=None, base=""):
     root = tree.getroot()
     width, height = int(root.attrib["width"]), int(root.attrib["height"])
 
-    if data.leader_card["id"] == -2:
+    if data.leader_card["image_id"] == -2:
         card_icon = open(base + "chihiro2x.png", "rb").read()
     else:
         if card_cache is None:
             output = io.BytesIO()
-            get_card(data.leader_card["id"], res_mgr, output)
+            get_card(data.leader_card["image_id"], res_mgr, output)
             card_icon = output.getvalue()
         else:
-            card_file = card_cache(data.leader_card["id"],
-                                   lambda f: get_card(data.leader_card["id"],
+            card_file = card_cache(data.leader_card["image_id"],
+                                   lambda f: get_card(data.leader_card["image_id"],
                                                       res_mgr, f))
             card_icon = open(card_file, "rb").read()
 
