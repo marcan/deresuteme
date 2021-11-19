@@ -285,8 +285,12 @@ def try_get_banner(user_id, sizename, privacy=0):
         key = "%d_p%d" % (user_id, privacy)
         privatize(data, privacy)
         res = get_sized_banner(key, data, mtime, size)
-        if request.query_string == "dl":
+        if data.id is None:
+            user_id = 0
+        if request.query_string == b"dl":
             res.headers['Content-Disposition'] = 'attachment; filename=%d_p%d_%s.png' % (user_id, privacy, sizename)
+        else:
+            res.headers['Content-Disposition'] = 'filename=%d_p%d_%s.png' % (user_id, privacy, sizename)
         return res
     except APIError as e:
         if e.code == 1457:
