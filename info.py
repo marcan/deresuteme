@@ -91,7 +91,7 @@ class ProducerInfo(object):
         self.last_login_ts = parse_ts(d["friend_info"]["user_info"]["last_login_time"])
         self.id = d["friend_info"]["user_info"]["viewer_id"]
         self.emblem_id = int(d["friend_info"]["user_info"].get("emblem_id", 1000001))
-        self.emblem_ex_value = int(d["friend_info"]["user_info"].get("emblem_ex_value", None))
+        self.emblem_ex_value = int(d["friend_info"]["user_info"].get("emblem_ex_value", 0)) or None
         if self.emblem_id == 0:
             self.emblem_id = 1000001
 
