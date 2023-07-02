@@ -69,7 +69,7 @@ class ApiClient(object):
         body = base64.b64encode(encrypt_cbc(plain, msg_iv, key) + key)
         sid = self.sid if self.sid else (str(self.viewer_id) + self.udid).encode("ascii")
         headers = {
-            "APP-VER": "9.0.0",
+            "APP-VER": "15.0.0",
             "IP-ADDRESS": "1.2.3.4",
             "X-Unity-Version": "2017.4.2f2",
             "DEVICE": "2",
